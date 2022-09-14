@@ -1,6 +1,6 @@
 {
   description = "josh's home";
-  
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
@@ -12,8 +12,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-    
-  outputs = {nixpkgs, home-manager, ...}:
+
+  outputs = { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -23,8 +23,8 @@
         inherit pkgs;
         modules = [
           ./home.nix
+          ./helix/helix.nix
         ];
-      }
+      };
     };
-  };
-};
+}

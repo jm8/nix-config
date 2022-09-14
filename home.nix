@@ -6,7 +6,20 @@
   
   home.packages = with pkgs; [
     firefox
-    helix
-    rnix-lsp
   ];
+  
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableSyntaxHighlighting = true;
+  };
+  
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+  
+  programs.home-manager.enable = true;
+  
+  home.stateVersion = "22.11";
 }
