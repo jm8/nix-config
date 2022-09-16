@@ -4,6 +4,7 @@
     package = null; # because we have nixos module
     enable = true;
     extraConfig = ''
+      exec-once=waybar
       monitor=,preferred,auto,1.25
 
       input {

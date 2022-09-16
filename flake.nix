@@ -28,9 +28,10 @@
         modules = [
           ./home.nix
           ./cli.nix
-          ./helix/helix.nix
+          ./helix/default.nix
           ./hyprland/default.nix
           ./kitty/default.nix
+          ./waybar/default.nix
           hyprland.homeManagerModules.default
         ];
       };

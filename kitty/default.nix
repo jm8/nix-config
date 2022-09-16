@@ -83,6 +83,8 @@
       # white
       color7  #B8C0E0
       color15 #A5ADCB
+    '' + ''
+      window_padding_width 4
     '';
   };
 }
