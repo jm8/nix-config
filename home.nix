@@ -4,9 +4,13 @@
   
   home.keyboard = null;
   
-  home.packages = with pkgs; [
-    firefox
-  ];
+  programs.firefox = {
+    enable = true;
+  };
+  
+  programs.kitty = {
+    enable = true;
+  };
   
   programs.zsh = {
     enable = true;

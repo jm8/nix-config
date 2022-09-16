@@ -29,14 +29,16 @@
           ./home.nix
           ./cli.nix
           ./helix/helix.nix
+          ./hyprland/default.nix
+          hyprland.homeManagerModules.default
         ];
       };
       nixosConfigurations.joshframework = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          hyprland.homeManagerModules.default
-          { wayland.windowManager.hyprland.enable = true; }
+          hyprland.nixosModules.default
+          { programs.hyprland.enable = true; }
         ];
       };
     };
