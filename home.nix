@@ -19,6 +19,11 @@
     enableZshIntegration = true;
   };
   
+  programs.gh = {
+    enable = true;
+    enableGitCredentialHelper = true;
+  };
+  
   programs.home-manager.enable = true;
   
   home.stateVersion = "22.11";

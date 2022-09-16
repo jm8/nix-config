@@ -27,6 +27,7 @@
         inherit pkgs;
         modules = [
           ./home.nix
+          ./cli.nix
           ./helix/helix.nix
         ];
       };
@@ -34,6 +35,8 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          hyprland.homeManagerModules.default
+          { wayland.windowManager.hyprland.enable = true; }
         ];
       };
     };
