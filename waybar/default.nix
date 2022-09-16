@@ -14,6 +14,9 @@
           format-ethernet = "ethernet";
           format-disconnected = "disconnected";
         };
+        battery = {
+          format = "{time} {capacity}";
+        };
       };
     };
     style = ./style.css;

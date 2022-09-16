@@ -4,6 +4,10 @@
   
   home.keyboard = null;
   
+  home.packages = with pkgs; [
+    # eclipses.eclipse-java
+  ];
+  
   programs.firefox = {
     enable = true;
   };
