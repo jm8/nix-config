@@ -8,10 +8,6 @@
     enable = true;
   };
   
-  programs.kitty = {
-    enable = true;
-  };
-  
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;

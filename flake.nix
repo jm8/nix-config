@@ -30,6 +30,7 @@
           ./cli.nix
           ./helix/helix.nix
           ./hyprland/default.nix
+          ./kitty/default.nix
           hyprland.homeManagerModules.default
         ];
       };

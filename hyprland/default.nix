@@ -29,8 +29,8 @@
           gaps_in=5
           gaps_out=20
           border_size=2
-          col.active_border=0x66ee1111
-          col.inactive_border=0x66333333
+          col.active_border=0x66b7bdf8
+          col.inactive_border=0x666e738d
 
           apply_sens_to_raw=0 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
 
