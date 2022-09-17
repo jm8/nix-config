@@ -2,6 +2,12 @@
 {
   programs.kitty = {
     enable = true;
+    settings = {
+      window_padding_width = 4;      
+    };
+    font = {
+      name = "JetBrains Mono NL Nerd Font";
+    };
     extraConfig = ''
       # vim:ft=kitty
 
@@ -83,8 +89,6 @@
       # white
       color7  #B8C0E0
       color15 #A5ADCB
-    '' + ''
-      window_padding_width 4
     '';
   };
 }
