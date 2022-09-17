@@ -74,6 +74,8 @@
       # example binds
       bind=SUPER,RETURN,exec,kitty
       bind=SUPERSHIFT,F,exec,firefox
+      bind=SUPER,SPACE,exec,rofi -show drun
+      bind=SUPERSHIFT,E,exec,exit
       bind=SUPERSHIFT,Q,killactive,
       bind=SUPER,P,pseudo,
 

@@ -21,6 +21,7 @@
         battery = {
           format = "{icon}  {capacity}% {time}";
           format-charging = " {icon}  {capacity}% {time}";
+          format-notcharging = "⚠ {icon}  {capacity}% Not charging";
           format-plugged = " {icon}  {capacity}%";
           format-full = "  {icon}  Full";
           format-time = "{H}h{M}m";

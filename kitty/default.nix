@@ -4,6 +4,7 @@
     enable = true;
     settings = {
       window_padding_width = 4;      
+      confirm_os_window_close = 0;
     };
     font = {
       name = "JetBrains Mono NL Nerd Font";

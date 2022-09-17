@@ -38,7 +38,7 @@ window#waybar {
   background: transparent;
 }
 
-.date, .time, #network, #battery {
+.date, .time, #network, #pulseaudio, #battery {
   margin-top: 10px;
   background: @crust;
   border: 2px solid alpha(@overlay0, 0.398);
