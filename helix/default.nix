@@ -1,10 +1,10 @@
 { lib, pkgs, ... }: {
+  imports = [
+    ./langservers.nix
+  ];
+
   home.packages = with pkgs; [
     helix
-
-    rnix-lsp
-    nixpkgs-fmt
-
   ];
 
   home.sessionVariables = rec {

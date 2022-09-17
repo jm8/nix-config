@@ -1,0 +1,39 @@
+{ pkgs, ... }:
+{
+  home.packages = with pkgs; [
+    nodePackages.dockerfile-language-server-nodejs
+    nodePackages.typescript-language-server
+    nodePackages.bash-language-server
+    nodePackages.vls
+    nodePackages.svelte-language-server
+    nodePackages.vscode-css-languageserver-bin
+    nodePackages.vscode-html-languageserver-bin
+    nodePackages.vscode-json-languageserver-bin
+    ocamlPackages.ocaml-lsp
+    rubyPackages.solargraph
+    elmPackages.elm-language-server
+    python310Packages.python-lsp-server
+    python310Packages.autopep8
+    black
+    nim
+    clang-tools
+    cmake-language-server
+    dart
+    deno
+    elixir_ls
+    gopls
+    haskell-language-server
+    jdt-language-server
+    kotlin-language-server
+    sumneko-lua-language-server
+    metals
+    nimlsp
+    rnix-lsp
+    alejandra
+    rust-analyzer
+    rustfmt
+    taplo
+    zig
+    zls
+  ];
+}

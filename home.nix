@@ -5,7 +5,12 @@
   home.keyboard = null;
   
   home.packages = with pkgs; [
-    # eclipses.eclipse-java
+    eclipses.eclipse-java
+    neofetch
+    zip
+    unzip
+    file
+    bat
   ];
   
   programs.firefox = {
