@@ -1,19 +1,26 @@
-{ pkgs, ... }: {
+{ pkgs, hyprland, ... }: {
+  imports = [
+    ./cli.nix
+    ./gui.nix
+    ./helix/default.nix
+    ./hyprland/default.nix
+    ./kitty/default.nix
+    ./waybar/default.nix
+    ./cursor/default.nix
+    ./rofi/default.nix
+    ./xdg.nix
+    hyprland.homeManagerModules.default
+  ];
+
   home.username = "josh";
   home.homeDirectory = "/home/josh";
 
   home.keyboard = null;
 
   home.packages = with pkgs; [
-    eclipses.eclipse-java
-    neofetch
-    zip
-    unzip
-    file
-    bat
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
-  
+
   fonts.fontconfig.enable = true;
 
   programs.firefox = {

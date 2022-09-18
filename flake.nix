@@ -17,7 +17,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ... }:
+  outputs = { nixpkgs, home-manager, hyprland, ... }@attrs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -25,28 +25,18 @@
     {
       homeConfigurations."josh@joshframework" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = attrs;
         modules = [
           ./home.nix
-          ./cli.nix
-          ./gui.nix
-          ./helix/default.nix
-          ./hyprland/default.nix
-          ./kitty/default.nix
-          ./waybar/default.nix
-          ./cursor/default.nix
-          ./rofi/default.nix
-          ./xdg.nix
-          hyprland.homeManagerModules.default
         ];
       };
 
       nixosConfigurations.joshframework = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = attrs;
         modules = [
-          ./configuration.nix
-          ./thunar/default.nix
-          hyprland.nixosModules.default
-          { programs.hyprland.enable = true; }
+          ./hosts/joshframework/configuration.nix
+          ./nixosCommon.nix
         ];
       };
     };
