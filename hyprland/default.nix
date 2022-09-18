@@ -1,10 +1,24 @@
 { pkgs, hyprland, ... }:
 {
+  home.packages = with pkgs; [
+    swaybg
+  ];
+  gtk = {
+    enable = true;
+    font = {
+      name = "DejaVu Sans";
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
   wayland.windowManager.hyprland = {
     package = null; # because we have nixos module
     enable = true;
     extraConfig = ''
       exec-once=waybar
+      exec-once=swaybg -i /home/josh/data/wallpapers/wallpaper.jpg -m fill
       monitor=,preferred,auto,1.25
 
       input {
@@ -67,15 +81,14 @@
       #windowrule=move 69 420,abc
       #windowrule=size 420 69,abc
       #windowrule=tile,xyz
-      #windowrule=float,abc
       #windowrule=pseudo,abc
       #windowrule=monitor 0,xyz
 
       # example binds
       bind=SUPER,RETURN,exec,kitty
       bind=SUPERSHIFT,F,exec,firefox
+      bind=SUPERSHIFT,E,exit,
       bind=SUPER,SPACE,exec,rofi -show drun
-      bind=SUPERSHIFT,E,exec,exit
       bind=SUPERSHIFT,Q,killactive,
       bind=SUPER,P,pseudo,
 

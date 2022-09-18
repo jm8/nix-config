@@ -53,14 +53,22 @@
     password = "josh";
     shell = pkgs.zsh;
   };
+  
+  services.usbmuxd.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
     git
     hello
+    libimobiledevice
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+  };
   
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

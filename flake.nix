@@ -39,10 +39,12 @@
           hyprland.homeManagerModules.default
         ];
       };
+
       nixosConfigurations.joshframework = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          ./thunar/default.nix
           hyprland.nixosModules.default
           { programs.hyprland.enable = true; }
         ];
