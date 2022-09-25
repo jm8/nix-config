@@ -2,19 +2,30 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, networkmanager-nixpkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
+  nixpkgs.overlays = [
+    (final: prev:
+      let nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
+      in
+      {
+        networkmanager = nmpkgs.networkmanager;
+        webkitgtk = nmpkgs.webkitgtk;
+      })
+  ];
+
   networking.hostName = "joshframework"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   time.timeZone = "America/New_York";
-  
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -28,7 +39,7 @@
     password = "josh";
     shell = pkgs.zsh;
   };
-  
+
   services.usbmuxd.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -39,7 +50,7 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   hardware.opengl = {
     enable = true;
     driSupport32Bit = true;
