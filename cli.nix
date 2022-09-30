@@ -7,5 +7,7 @@
     unzip
     file
     bat
+		grim
+		slurp
 	];
 }

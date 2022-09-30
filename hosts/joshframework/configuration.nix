@@ -17,12 +17,14 @@
       in
       {
         networkmanager = nmpkgs.networkmanager;
+        wpa_supplicant = nmpkgs.wpa_supplicant;
         webkitgtk = nmpkgs.webkitgtk;
       })
   ];
 
   networking.hostName = "joshframework"; # Define your hostname.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.wireless.enable = false;
 
   time.timeZone = "America/New_York";
 
@@ -32,7 +34,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  
+
   hardware.pulseaudio.enable = false;
 
   users.users.josh = {
@@ -56,6 +58,10 @@
   hardware.opengl = {
     enable = true;
     driSupport32Bit = true;
+  };
+
+  services.xserver.displayManager.gdm = {
+    enable = true;
   };
 
   # This value determines the NixOS release from which the default

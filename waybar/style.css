@@ -38,7 +38,7 @@ window#waybar {
   background: transparent;
 }
 
-.date, .time, #network, #pulseaudio, #battery {
+.date, .time, #network, #pulseaudio, #battery, #backlight, #memory, #cpu, #disk {
   margin-top: 10px;
   background: @crust;
   border: 2px solid alpha(@overlay0, 0.398);
@@ -48,6 +48,10 @@ window#waybar {
   color: @text;
 }
 
-.time {
+#pulseaudio {
   margin-right: 20px;
+}
+
+#memory {
+  margin-left: 20px;
 }

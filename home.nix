@@ -1,4 +1,4 @@
-{ pkgs, hyprland, ... }: {
+{ pkgs, hyprland, nix-godot, ... }: {
   imports = [
     ./cli.nix
     ./gui.nix
@@ -19,6 +19,7 @@
 
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nix-godot.packages.x86_64-linux.godot
   ];
 
   fonts.fontconfig.enable = true;

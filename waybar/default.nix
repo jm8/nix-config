@@ -6,8 +6,19 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 37;
-        modules-right = [ "network" "battery" "pulseaudio" "clock#date" "clock#time" ];
+
+        modules-left = [ "memory" "disk" "cpu" ];
+        modules-center = ["clock#date" "clock#time"];
+        modules-right = [ "network" "battery" "backlight" "pulseaudio" ];
+        memory = {
+          format = " {used:.3} GiB";
+        };
+        disk = {
+          format = " {used} GiB";
+        };
+        cpu = {
+          format = " {usage}%";
+        };
         network = {
           format = "{icon}";
           format-wifi = "  {essid}";

@@ -212,7 +212,42 @@
         "type": "github"
       }
     },
+    "nix-godot": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "src": "src"
+      },
+      "locked": {
+        "lastModified": 1664493789,
+        "narHash": "sha256-huFXV3Ec2TcC7/52I4Haaxi8uwcplIspu5e0tzu/ejo=",
+        "owner": "jm8",
+        "repo": "nix-godot",
+        "rev": "a2b1e3494bf739331bc623e90f2860c0856157b9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jm8",
+        "repo": "nix-godot",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1664017330,
+        "narHash": "sha256-919WZKBTxFdTkzIK6uJXE7hwSPQb7e/ekybxxWaotR4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "fde244a8c7655bc28616864e2290ad9c95409c2c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1663112159,
         "narHash": "sha256-31rjPhB6Hj1QoqLvFSULFf9Z/6z05vR0KrLGYvr9w0M=",
@@ -234,7 +269,8 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "networkmanager-nixpkgs": "networkmanager-nixpkgs",
-        "nixpkgs": "nixpkgs"
+        "nix-godot": "nix-godot",
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "rust-overlay": {
@@ -257,6 +293,18 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
+      }
+    },
+    "src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-Rv9tjo0voIZRJ95wc59CA4EbSNbBqbwwVt9+bbPeK5w=",
+        "type": "tarball",
+        "url": "https://downloads.tuxfamily.org/godotengine/4.0/beta2/godot-4.0-beta2.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://downloads.tuxfamily.org/godotengine/4.0/beta2/godot-4.0-beta2.tar.xz"
       }
     },
     "utils": {
