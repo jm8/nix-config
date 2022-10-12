@@ -1,5 +1,6 @@
 {pkgs, ...}: {
 	home.packages = with pkgs; [
+		comma
 		exa
 		wl-clipboard
     neofetch
@@ -9,5 +10,8 @@
     bat
 		grim
 		slurp
+		clang
+		pandoc
+		lldb
 	];
 }

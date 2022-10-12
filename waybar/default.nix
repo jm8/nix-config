@@ -38,6 +38,9 @@
           format-time = "{H}h{M}m";
           format-icons = [ "" "" "" "" "" ];
         };
+        backlight = {
+          format = " {percent}%";
+        };
         "clock#date" = {
           format = "{:%a %b %d}";
         };
