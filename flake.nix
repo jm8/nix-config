@@ -40,11 +40,28 @@
         ];
       };
 
+      homeConfigurations."josh@joshnix" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = attrs;
+        modules = [
+          ./home.nix
+        ];
+      };
+
       nixosConfigurations.joshframework = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
           ./hosts/joshframework/configuration.nix
+          ./nixosCommon.nix
+        ];
+      };
+
+      nixosConfigurations.joshnix = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = attrs;
+        modules = [
+          ./hosts/joshnix/configuration.nix
           ./nixosCommon.nix
         ];
       };

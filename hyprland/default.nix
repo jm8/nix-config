@@ -19,7 +19,7 @@
     extraConfig = ''
       exec-once=waybar
       exec-once=swaybg -i /home/josh/data/wallpapers/wallpaper.jpg -m fill
-      monitor=,preferred,auto,1.25
+      monitor=,preferred,auto,1
 
       input {
           kb_file=
