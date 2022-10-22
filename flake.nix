@@ -15,6 +15,12 @@
       url = "github:hyprwm/hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    networkmanager-nixpkgs = {
+      url = "github:NixOS/nixpkgs/22.05";
+    };
+    nix-godot = {
+      url = "github:jm8/nix-godot";
+    };
   };
 
   outputs = { nixpkgs, home-manager, hyprland, ... }@attrs:

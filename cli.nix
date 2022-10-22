@@ -1,5 +1,6 @@
 {pkgs, ...}: {
 	home.packages = with pkgs; [
+		comma
 		exa
 		wl-clipboard
     neofetch
@@ -7,5 +8,10 @@
     unzip
     file
     bat
+		grim
+		slurp
+		clang
+		pandoc
+		lldb
 	];
 }

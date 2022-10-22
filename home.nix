@@ -1,4 +1,4 @@
-{ pkgs, hyprland, ... }: {
+{ pkgs, hyprland, nix-godot, ... }: {
   imports = [
     ./cli.nix
     ./gui.nix
@@ -17,8 +17,17 @@
 
   home.keyboard = null;
 
+  programs.vscode = {
+    package = pkgs.vscodium;
+    enable = true;
+  };
+
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nix-godot.packages.x86_64-linux.godot
+    brightnessctl
+    pamixer
+    obs-studio
   ];
 
   fonts.fontconfig.enable = true;
@@ -42,7 +51,7 @@
     enable = true;
     enableGitCredentialHelper = true;
   };
-
+  
   programs.home-manager.enable = true;
 
   home.stateVersion = "22.11";

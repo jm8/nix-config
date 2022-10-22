@@ -84,13 +84,20 @@
       #windowrule=pseudo,abc
       #windowrule=monitor 0,xyz
 
-      # example binds
       bind=SUPER,RETURN,exec,kitty
       bind=SUPERSHIFT,F,exec,firefox
+      bind=SUPERSHIFT,C,exec,code
       bind=SUPERSHIFT,E,exit,
       bind=SUPER,SPACE,exec,rofi -show drun
       bind=SUPERSHIFT,Q,killactive,
       bind=SUPER,P,pseudo,
+      
+      bind=,XF86AudioRaiseVolume,exec,pamixer -i 10
+      bind=,XF86AudioLowerVolume,exec,pamixer -d 10
+      bind=,XF86MonBrightnessUp,exec,brightnessctl s +10% 
+      bind=,XF86MonBrightnessDown,exec,brightnessctl s 10%-
+
+      bind=SUPER,V,togglefloating,
 
       bind=SUPER,left,movefocus,l
       bind=SUPER,right,movefocus,r
