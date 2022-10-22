@@ -13,5 +13,7 @@
 		clang
 		pandoc
 		lldb
+		python3
+		octave
 	];
 }

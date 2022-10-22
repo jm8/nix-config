@@ -1,4 +1,4 @@
-{ pkgs, hyprland, nix-godot, ... }: {
+{ pkgs, hyprland, nix-godot, nix-analyzer, ... }: {
   imports = [
     ./cli.nix
     ./gui.nix
@@ -19,6 +19,12 @@
 
   programs.vscode = {
     package = pkgs.vscodium;
+    extensions = with pkgs.vscode-extensions; [
+      rust-lang.rust-analyzer
+      jnoortheen.nix-ide
+    ] ++ [
+      #nix-analyzer.packages.x86_64-linux.vscode-extension
+    ];
     enable = true;
   };
 
@@ -43,6 +49,11 @@
   };
 
   programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.direnv = {
     enable = true;
     enableZshIntegration = true;
   };

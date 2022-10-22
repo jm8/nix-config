@@ -8,5 +8,6 @@
     {
       services.xserver.desktopManager.gnome.enable = true;
     }
+    ./syncthing.nix
   ];
 }
