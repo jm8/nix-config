@@ -52,7 +52,7 @@
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
-          ./sys/joshframework/configuration.nix
+          ./sys/joshframework.nix
           ./sys/common.nix
         ];
       };
@@ -61,7 +61,7 @@
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
-          ./sys/joshnix/configuration.nix
+          ./sys/joshnix.nix
           ./sys/common.nix
         ];
       };
