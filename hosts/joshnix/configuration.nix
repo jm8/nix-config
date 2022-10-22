@@ -45,6 +45,19 @@
       vim
       pulseaudio
     ];
+    
+    environment.variables = {
+      CLUTTER_BACKEND = "wayland";
+      GBM_BACKEND = "nvidia-drm";
+      LIBVA_DRIVER_NAME = "nvidia";
+      XDG_SESSION_TYPE = "wayland";
+      MOZ_ENABLE_WAYLAND = "1";
+      __GLX_VENDOR_LIBRARY = "nvidia";
+      WLR_NO_HARDWARE_CURSORS = "1";
+      WLR_BACKEND = "vulkan";
+      QT_QPA_PLATFORM = "wayland";
+      GDK_BACKEND = "wayland";
+    };
 
     networking = {
       hostName = "joshnix";
@@ -59,9 +72,11 @@
         isNormalUser = true;
         extraGroups = [ "wheel" "libvirtd" "kvm" "docker" ];
         uid = 1000;
-        initialPassword = "password";
+        initialPassword = "josh";
       };
     };
+
+    hardware.pulseaudio.enable = false;
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
       "nvidia-x11"
@@ -71,36 +86,34 @@
       "steam-runtime"
     ];
 
-    services.xserver = {
-      enable = true;
-      videoDrivers = [ "nvidia" ];
-      # displayManager.defaultSession = "none+i3";
-      displayManager.sddm = {
-        enable = true;
-        autoNumlock = true;
-      };
+    # services.xserver = {
+    #   enable = true;
+    #   videoDrivers = [ "nvidia" ];
+    #   # displayManager.defaultSession = "none+i3";
+    #   # displayManager.sddm = {
+    #   #   enable = true;
+    #   #   autoNumlock = true;
+    #   # };
 
-      desktopManager = {
-        xterm.enable = false;
-      };
+    #   # desktopManager = {
+    #   #   xterm.enable = false;
+    #   # };
 
-      windowManager.i3 = {
-        enable = false;
-        extraPackages = with pkgs; [
-          # dmenu
-          rofi
-          i3status
-          i3lock
-          i3blocks
-        ];
-      };
+    #   # windowManager.i3 = {
+    #   #   enable = false;
+    #   #   extraPackages = with pkgs; [
+    #   #     # dmenu
+    #   #     rofi
+    #   #     i3status
+    #   #     i3lock
+    #   #     i3blocks
+    #   #   ];
+    #   # };
 
-      layout = "us,gr";
-      xkbVariant = ",polytonic";
-      xkbOptions = "grp:win_space_toggle";
-
-
-    };
+    #   layout = "us,gr";
+    #   xkbVariant = ",polytonic";
+    #   xkbOptions = "grp:win_space_toggle";
+    # };
 
     services.printing = {
       enable = true;
@@ -117,10 +130,16 @@
     # services.avahi.enable = true;
     # services.avahi.nssmdns = true;
 
-    hardware.opengl.enable = true;
-    # 32bit opengl required for lutris epic games store
-    hardware.opengl.driSupport = true;
-    hardware.opengl.driSupport32Bit = true;
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+      extraPackages = with pkgs; [
+        vaapiVdpau
+        libvdpau-va-gl
+        nvidia-vaapi-driver
+      ];
+    };
     programs.steam.enable = true;
 
     programs.fish.enable = true;
@@ -182,7 +201,7 @@
     #     "^/etc/tmpfiles\\.d/.*$"
     #   ];
     # };
-
+    
     systemd.enableEmergencyMode = false;
 
     systemd.extraConfig = ''
