@@ -18,8 +18,10 @@
     enable = true;
     extraConfig = ''
       exec-once=waybar
-      exec-once=swaybg -i /home/josh/data/wallpapers/wallpaper.jpg -m fill
-      monitor=,preferred,auto,1
+      exec-once=swaybg -o '*' -i /home/josh/data/wallpapers/wallpaper.jpg -m fill
+      monitor=DP-1,preferred,0x0,1
+      monitor=DVI-D-1,preferred,1600x0,1
+      monitor=HDMI-A-1,preferred,3200x0,1
 
       input {
           kb_file=

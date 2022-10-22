@@ -36,7 +36,7 @@
         inherit pkgs;
         extraSpecialArgs = attrs;
         modules = [
-          ./home.nix
+          ./home
         ];
       };
 
@@ -44,7 +44,7 @@
         inherit pkgs;
         extraSpecialArgs = attrs;
         modules = [
-          ./home.nix
+          ./home
         ];
       };
 
@@ -52,8 +52,8 @@
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
-          ./hosts/joshframework/configuration.nix
-          ./nixosCommon.nix
+          ./sys/joshframework/configuration.nix
+          ./sys/common.nix
         ];
       };
 
@@ -61,8 +61,8 @@
         system = "x86_64-linux";
         specialArgs = attrs;
         modules = [
-          ./hosts/joshnix/configuration.nix
-          ./nixosCommon.nix
+          ./sys/joshnix/configuration.nix
+          ./sys/common.nix
         ];
       };
     };

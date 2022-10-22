@@ -2,12 +2,12 @@
   imports = [
     ./cli.nix
     ./gui.nix
-    ./helix/default.nix
-    ./hyprland/default.nix
-    ./kitty/default.nix
-    ./waybar/default.nix
-    ./cursor/default.nix
-    ./rofi/default.nix
+    ./helix
+    ./hyprland
+    ./kitty
+    ./waybar
+    ./cursor
+    ./rofi
     ./xdg.nix
     hyprland.homeManagerModules.default
   ];
