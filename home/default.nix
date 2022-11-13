@@ -27,7 +27,7 @@
     ];
     enable = true;
   };
-
+  
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     nix-godot.packages.x86_64-linux.godot
@@ -42,17 +42,6 @@
     enable = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
@@ -62,6 +51,10 @@
     enable = true;
     enableGitCredentialHelper = true;
   };
+  
+  home.file.".xonshrc".text = ''
+    execx($(starship init xonsh))
+  ''; 
   
   programs.home-manager.enable = true;
 

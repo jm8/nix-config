@@ -19,9 +19,11 @@
     extraConfig = ''
       exec-once=waybar
       exec-once=swaybg -o '*' -i /home/josh/data/wallpapers/wallpaper.jpg -m fill
+      exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       monitor=DP-1,preferred,0x0,1
       monitor=DVI-D-1,preferred,1600x0,1
       monitor=HDMI-A-1,preferred,3200x0,1
+      monitor=eDP-1,preferred,auto,1.5
 
       input {
           kb_file=

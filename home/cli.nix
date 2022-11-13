@@ -15,5 +15,7 @@
 		lldb
 		python3
 		octave
+		ghidra
+		wireshark
 	];
 }
