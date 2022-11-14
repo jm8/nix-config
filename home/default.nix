@@ -22,6 +22,7 @@
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
+      ms-python.python
     ] ++ [
       #nix-analyzer.packages.x86_64-linux.vscode-extension
     ];
