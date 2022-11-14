@@ -2,7 +2,9 @@
   description = "josh's home";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +31,13 @@
   outputs = { nixpkgs, home-manager, hyprland, ... }@attrs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfreePredicate = pkg:
+          builtins.elem (nixpkgs.lib.getName pkg) [
+            "zoom"
+          ];
+      };
     in
     {
       homeConfigurations."josh@joshframework" = home-manager.lib.homeManagerConfiguration {

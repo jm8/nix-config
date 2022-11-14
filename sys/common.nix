@@ -10,12 +10,16 @@
 
   virtualisation.podman.enable = true;
 
+  virtualisation.docker.enable = true;
+
   services.xserver.desktopManager.gnome.enable = true;
 
   environment.systemPackages = with pkgs; [
     git
     vim
     pulseaudio
+    docker-compose
+    starship
   ];
 
   nix = {
@@ -65,6 +69,7 @@
     };
     pulse.enable = true;
   };
+  services.dbus.enable = true;
 
   hardware.pulseaudio.enable = false;
 
@@ -94,7 +99,10 @@
     };
   };
   
-  users.defaultUserShell = pkgs.zsh;
+  programs.xonsh = {
+    enable = true;
+  };
+  users.defaultUserShell = pkgs.xonsh;
 
   nixpkgs.overlays = [
     (final: prev:
