@@ -95,7 +95,7 @@
       isNormalUser = true;
       extraGroups = [ "wheel" "libvirtd" "kvm" "docker" ];
       uid = 1000;
-      initialPassword = "josh";
+      hashedPassword = "$6$4vtL8Do8lVPwnN9o$z2ub/5/28W/HBRyRG0aZcd3IoesQEHhRXKmiDjxxO7lI.XpCjwIpE/z1oP3prwd8eLE88EMdzzhWEjvJOb5Bz0";
     };
   };
   

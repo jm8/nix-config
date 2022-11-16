@@ -15,6 +15,7 @@
 		lldb
 		python3
 		octave
+		pdftk
 		ghidra
 		wireshark
 	];
