@@ -102,7 +102,12 @@
   programs.xonsh = {
     enable = true;
   };
-  users.defaultUserShell = pkgs.xonsh;
+  
+  programs.zsh = {
+    enable = true;
+  };
+
+  users.defaultUserShell = pkgs.zsh;
 
   nixpkgs.overlays = [
     (final: prev:
