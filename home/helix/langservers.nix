@@ -30,6 +30,7 @@
     nimlsp
     rnix-lsp
     alejandra
+    nixpkgs-fmt
     rust-analyzer
     rustfmt
     taplo
