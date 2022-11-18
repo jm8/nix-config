@@ -18,5 +18,7 @@
 		pdftk
 		ghidra
 		wireshark
+		yt-dlp
+		bear
 	];
 }
