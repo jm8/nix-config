@@ -20,5 +20,7 @@
 		wireshark
 		yt-dlp
 		bear
+		appimage-run
+		lilypond
 	];
 }

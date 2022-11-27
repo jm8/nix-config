@@ -8,5 +8,8 @@
     eclipses.eclipse-java
     chromium
     zoom-us
+    vlc
+    ffmpeg
+    musescore
   ];
 }
