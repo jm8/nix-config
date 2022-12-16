@@ -21,5 +21,6 @@
 		yt-dlp
 		bear
 		onlyoffice-bin
+		cachix
 	];
 }
