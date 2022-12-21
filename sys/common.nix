@@ -23,9 +23,8 @@
     starship
   ];
 
-  nix.trusted-users = [ "root" "josh" ];
-  package = pkgs.nixUnstable;
-  extraOptions = ''
+  nix.settings.trusted-users = [ "root" "josh" ];
+  nix.extraOptions = ''
     # enable the new standalone nix commands
     experimental-features = nix-command flakes
 
@@ -37,7 +36,7 @@
     accept-flake-config = true
     warn-dirty = false
   '';
-  gc = {
+  nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "";

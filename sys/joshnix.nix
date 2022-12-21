@@ -108,10 +108,10 @@
         options = [ "rw" "nofail" ];
       };
 
-      "/winnew" = {
-        options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
-        device = "/dev/sda3";
-      };
+      # "/winnew" = {
+      #   options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
+      #   device = "/dev/sda3";
+      # };
 
       "/winold" = {
         options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
