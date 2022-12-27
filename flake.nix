@@ -33,11 +33,9 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfreePredicate = pkg:
-          builtins.elem (nixpkgs.lib.getName pkg) [
-            "zoom"
-            "minecraft-launcher"
-          ];
+        config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
+           "zoom"
+         ];
       };
     in
     {

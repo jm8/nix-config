@@ -1,4 +1,4 @@
-({ config, pkgs, lib, ... }:
+({ config, pkgs, lib, networkmanager-nixpkgs, ... }:
   {
     environment.variables = {
       CLUTTER_BACKEND = "wayland";
@@ -113,10 +113,10 @@
       #   device = "/dev/sda3";
       # };
 
-      "/winold" = {
-        options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
-        device = "/dev/sdc4";
-      };
+      # "/winold" = {
+      #   options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
+      #   device = "/dev/sdc4";
+      # };
     };
 
     # enable fstrim because I am running on an ssd
@@ -157,6 +157,10 @@
         useOSProber = true;
       };
     };
+
+    services.xserver.videoDrivers = [
+      "nvidia"
+    ];
 
     hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     hardware.enableRedistributableFirmware = lib.mkDefault true;
