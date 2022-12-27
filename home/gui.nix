@@ -10,6 +10,6 @@
     zoom-us
     vlc
     ffmpeg
-    minecraft
+    prismlauncher
   ];
 }

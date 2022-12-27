@@ -13,11 +13,4 @@
     pictures = /home/josh/data/pictures;
     videos = /home/josh/data/videos;
   };
-  
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      
-    };
-  };
 }
