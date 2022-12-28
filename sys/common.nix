@@ -71,6 +71,7 @@
     "steam-original"
     "steam-runtime"
     "steam-run"
+    "nvidia-persistenced"
     "zoom"
   ];
 

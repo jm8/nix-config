@@ -1,4 +1,4 @@
-({ config, pkgs, lib, networkmanager-nixpkgs, ... }:
+({ config, pkgs, lib, ... }:
   {
     environment.variables = {
       CLUTTER_BACKEND = "wayland";
@@ -12,6 +12,22 @@
       QT_QPA_PLATFORM = "wayland";
       GDK_BACKEND = "wayland";
     };
+
+    boot.blacklistedKernelModules = ["nouveau"];
+
+    hardware.nvidia.modesetting.enable = true;
+
+    services.xserver.videoDrivers = [
+      "nvidia"
+    ];
+    services.xserver.deviceSection = ''
+      Option "AllowSHMPixmaps" "on"
+      Option "DRI3" "on"
+    '';
+
+    virtualisation.docker.enableNvidia = true;
+    virtualisation.podman.enableNvidia = true;
+    
 
     networking.hostName = "joshnix";
 
@@ -157,10 +173,6 @@
         useOSProber = true;
       };
     };
-
-    services.xserver.videoDrivers = [
-      "nvidia"
-    ];
 
     hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
     hardware.enableRedistributableFirmware = lib.mkDefault true;
