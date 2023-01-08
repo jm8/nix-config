@@ -35,6 +35,7 @@
         inherit system;
         config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
            "zoom"
+          "ngrok"
          ];
       };
     in

@@ -11,5 +11,6 @@
     vlc
     ffmpeg
     prismlauncher
+    lapce
   ];
 }

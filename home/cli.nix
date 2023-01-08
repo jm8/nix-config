@@ -22,5 +22,6 @@
 		bear
 		onlyoffice-bin
 		cachix
+		ngrok
 	];
 }
