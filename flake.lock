@@ -105,21 +105,6 @@
         "type": "github"
       }
     },
-    "flake-utils_2": {
-      "locked": {
-        "lastModified": 1659877975,
-        "narHash": "sha256-zllb8aq3YO3h8B/U0/J1WBgAL8EX5yWf5pMj3G0NAmc=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "c0e246b9b83f637f4681389ecabcb2681b4f3af0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "helix": {
       "inputs": {
         "nci": "nci",
@@ -184,24 +169,6 @@
         "type": "github"
       }
     },
-    "naersk": {
-      "inputs": {
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1662220400,
-        "narHash": "sha256-9o2OGQqu4xyLZP9K6kNe1pTHnyPz0Wr3raGYnr9AIgY=",
-        "owner": "nix-community",
-        "repo": "naersk",
-        "rev": "6944160c19cb591eb85bbf9b2f2768a935623ed3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "naersk",
-        "type": "github"
-      }
-    },
     "nci": {
       "inputs": {
         "devshell": "devshell",
@@ -245,89 +212,7 @@
         "type": "github"
       }
     },
-    "nix-analyzer": {
-      "inputs": {
-        "flake-utils": "flake-utils_2",
-        "naersk": "naersk",
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1666406139,
-        "narHash": "sha256-nZIFYa0rlv5enjTLa8IvZiQL0f8nwxDCgf4VVYzDPMo=",
-        "type": "git",
-        "url": "file:///home/josh/dev/nix-analyzer"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:///home/josh/dev/nix-analyzer"
-      }
-    },
-    "nix-godot": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_3",
-        "src": "src"
-      },
-      "locked": {
-        "lastModified": 1664493789,
-        "narHash": "sha256-huFXV3Ec2TcC7/52I4Haaxi8uwcplIspu5e0tzu/ejo=",
-        "owner": "jm8",
-        "repo": "nix-godot",
-        "rev": "a2b1e3494bf739331bc623e90f2860c0856157b9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jm8",
-        "repo": "nix-godot",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
-      "locked": {
-        "lastModified": 1665634984,
-        "narHash": "sha256-zwXeMc96BD9iFxSB/SLr3dI8iYpqM+seX9qy6bGV+cw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "cfea568da97a2668ef3cb3fc42eaacfb0e706807",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1665634984,
-        "narHash": "sha256-zwXeMc96BD9iFxSB/SLr3dI8iYpqM+seX9qy6bGV+cw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "cfea568da97a2668ef3cb3fc42eaacfb0e706807",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1664017330,
-        "narHash": "sha256-919WZKBTxFdTkzIK6uJXE7hwSPQb7e/ekybxxWaotR4=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "fde244a8c7655bc28616864e2290ad9c95409c2c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_4": {
       "locked": {
         "lastModified": 1671983799,
         "narHash": "sha256-Z2Ro6hFPZHkBqkVXY5/aBUzxi5xizQGvuHQ9+T5B/ks=",
@@ -349,9 +234,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "networkmanager-nixpkgs": "networkmanager-nixpkgs",
-        "nix-analyzer": "nix-analyzer",
-        "nix-godot": "nix-godot",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs"
       }
     },
     "rust-overlay": {
@@ -374,18 +257,6 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
-      }
-    },
-    "src": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-Rv9tjo0voIZRJ95wc59CA4EbSNbBqbwwVt9+bbPeK5w=",
-        "type": "tarball",
-        "url": "https://downloads.tuxfamily.org/godotengine/4.0/beta2/godot-4.0-beta2.tar.xz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://downloads.tuxfamily.org/godotengine/4.0/beta2/godot-4.0-beta2.tar.xz"
       }
     },
     "utils": {

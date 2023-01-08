@@ -20,12 +20,6 @@
     networkmanager-nixpkgs = {
       url = "github:NixOS/nixpkgs/22.05";
     };
-    nix-godot = {
-      url = "github:jm8/nix-godot";
-    };
-    nix-analyzer = {
-      url = "/home/josh/dev/nix-analyzer";
-    };
   };
 
   outputs = { nixpkgs, home-manager, hyprland, ... }@attrs:
@@ -35,7 +29,7 @@
         inherit system;
         config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
            "zoom"
-          "ngrok"
+           "ngrok"
          ];
       };
     in

@@ -17,10 +17,8 @@
       };
       in
       {
-        networkmanager = nmpkgs.networkmanager;
-        wpa_supplicant = nmpkgs.wpa_supplicant;
-        webkitgtk = nmpkgs.webkitgtk;
-      })
+        inherit (nmpkgs) networkmanager wpa_supplicant;
+     })
   ];
 
   networking.hostName = "joshframework";
@@ -46,7 +44,7 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_19;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   fileSystems."/" =
     {
