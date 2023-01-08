@@ -1,4 +1,4 @@
-{ pkgs, hyprland, nix-godot, nix-analyzer, ... }: {
+{ pkgs, hyprland, nix-analyzer, ... }: {
   imports = [
     ./cli.nix
     ./gui.nix
@@ -30,7 +30,6 @@
   
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    nix-godot.packages.x86_64-linux.godot
     brightnessctl
     pamixer
     obs-studio
