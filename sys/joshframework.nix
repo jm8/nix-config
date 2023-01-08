@@ -10,6 +10,19 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
+  nixpkgs.overlays = [
+    (final: prev:
+      let nmpkgs = import networkmanager-nixpkgs {
+        system = "x86_64-linux";
+      };
+      in
+      {
+        networkmanager = nmpkgs.networkmanager;
+        wpa_supplicant = nmpkgs.wpa_supplicant;
+        webkitgtk = nmpkgs.webkitgtk;
+      })
+  ];
+
   networking.hostName = "joshframework";
 
   services.usbmuxd.enable = true;
@@ -108,6 +121,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
 }
 

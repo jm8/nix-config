@@ -13,6 +13,22 @@
       GDK_BACKEND = "wayland";
     };
 
+    boot.blacklistedKernelModules = ["nouveau"];
+
+    hardware.nvidia.modesetting.enable = true;
+
+    services.xserver.videoDrivers = [
+      "nvidia"
+    ];
+    services.xserver.deviceSection = ''
+      Option "AllowSHMPixmaps" "on"
+      Option "DRI3" "on"
+    '';
+
+    virtualisation.docker.enableNvidia = true;
+    virtualisation.podman.enableNvidia = true;
+    
+
     networking.hostName = "joshnix";
 
     hardware.opengl = {
@@ -108,15 +124,15 @@
         options = [ "rw" "nofail" ];
       };
 
-      "/winnew" = {
-        options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
-        device = "/dev/sda3";
-      };
+      # "/winnew" = {
+      #   options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
+      #   device = "/dev/sda3";
+      # };
 
-      "/winold" = {
-        options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
-        device = "/dev/sdc4";
-      };
+      # "/winold" = {
+      #   options = [ "uid=1000" "gid=1000" "dmask=007" "fmask=117" "rw" "nofail" ];
+      #   device = "/dev/sdc4";
+      # };
     };
 
     # enable fstrim because I am running on an ssd

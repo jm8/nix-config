@@ -22,5 +22,8 @@
 		bear
 		appimage-run
 		lilypond
+		onlyoffice-bin
+		cachix
+		ngrok
 	];
 }

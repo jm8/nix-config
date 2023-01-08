@@ -31,6 +31,7 @@
   home.pointerCursor = {
     package = pkgs.quintom-cursor-theme;
     name = "Quintom_Snow";
-    size = 32;
+    gtk.enable = true;
+    size = 24;
   };
 }

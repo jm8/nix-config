@@ -11,5 +11,7 @@
     vlc
     ffmpeg
     musescore
+    prismlauncher
+    lapce
   ];
 }

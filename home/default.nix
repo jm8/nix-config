@@ -69,6 +69,8 @@
   };
   
   programs.home-manager.enable = true;
-
+  
+  manual.manpages.enable = false;
+  
   home.stateVersion = "22.11";
 }
