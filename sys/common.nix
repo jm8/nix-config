@@ -84,6 +84,7 @@
     "nvidia-x11"
     "nvidia-settings"
     "steam"
+    "steam-run"
     "steam-original"
     "steam-runtime"
   ];
@@ -109,14 +110,14 @@
 
   users.defaultUserShell = pkgs.zsh;
 
-  nixpkgs.overlays = [
-    (final: prev:
-      let nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
-      in
-      {
-        networkmanager = nmpkgs.networkmanager;
-        wpa_supplicant = nmpkgs.wpa_supplicant;
-        webkitgtk = nmpkgs.webkitgtk;
-      })
-  ];
+  # nixpkgs.overlays = [
+  #   (final: prev:
+  #     let nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
+  #     in
+  #     {
+  #       networkmanager = nmpkgs.networkmanager;
+  #       wpa_supplicant = nmpkgs.wpa_supplicant;
+  #       webkitgtk = nmpkgs.webkitgtk;
+  #     })
+  # ];
 }
