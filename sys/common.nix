@@ -68,6 +68,7 @@
     "nvidia-x11"
     "nvidia-settings"
     "steam"
+    "steam-run"
     "steam-original"
     "steam-runtime"
     "steam-run"
