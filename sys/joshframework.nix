@@ -12,6 +12,15 @@
 
   networking.hostName = "joshframework";
 
+  nixpkgs.overlays = [
+    (final: prev:
+      let nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
+      in
+      {
+        inherit (nmpkgs) wpa_supplicant;
+      })
+  ];
+
   services.usbmuxd.enable = true;
 
   environment.systemPackages = with pkgs; [
