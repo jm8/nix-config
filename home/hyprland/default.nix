@@ -97,8 +97,8 @@
       bind=SUPERSHIFT,Q,killactive,
       bind=SUPER,P,pseudo,
       
-      bind=,XF86AudioRaiseVolume,exec,pamixer -i 10
-      bind=,XF86AudioLowerVolume,exec,pamixer -d 10
+      bind=,XF86AudioRaiseVolume,exec,pamixer -i 5
+      bind=,XF86AudioLowerVolume,exec,pamixer -d 5
       bind=,XF86MonBrightnessUp,exec,brightnessctl s +10% 
       bind=,XF86MonBrightnessDown,exec,brightnessctl s 10%-
 
