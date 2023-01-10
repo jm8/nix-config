@@ -91,6 +91,7 @@
       bind=SUPER,RETURN,exec,kitty
       bind=SUPERSHIFT,F,exec,firefox
       bind=SUPERSHIFT,C,exec,code
+      bind=SUPERSHIFT,S,exec,grim -g "$(slurp)" - | wl-copy
       bind=SUPERSHIFT,E,exit,
       bind=SUPER,SPACE,exec,rofi -show drun
       bind=SUPERSHIFT,Q,killactive,
