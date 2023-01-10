@@ -25,5 +25,6 @@
 		onlyoffice-bin
 		cachix
 		ngrok
+		lazygit
 	];
 }
