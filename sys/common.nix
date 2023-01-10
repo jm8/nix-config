@@ -21,6 +21,8 @@
     pulseaudio
     docker-compose
     starship
+    adw-gtk3
+    adwaita-qt
   ];
 
   nix.settings.trusted-users = [ "root" "josh" ];
