@@ -10,17 +10,6 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  nixpkgs.overlays = [
-    (final: prev:
-      let nmpkgs = import networkmanager-nixpkgs {
-        system = "x86_64-linux";
-      };
-      in
-      {
-        inherit (nmpkgs) networkmanager wpa_supplicant;
-     })
-  ];
-
   networking.hostName = "joshframework";
 
   nixpkgs.overlays = [
