@@ -26,5 +26,6 @@
 		cachix
 		ngrok
 		lazygit
+		openconnect
 	];
 }

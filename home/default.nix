@@ -18,7 +18,7 @@
   home.keyboard = null;
 
   programs.vscode = {
-    package = pkgs.vscodium;
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
