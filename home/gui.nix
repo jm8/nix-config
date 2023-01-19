@@ -7,7 +7,7 @@
     element-desktop-wayland
     (with eclipses; eclipseWithPlugins {
       eclipse = eclipse-java;
-      jvmArgs = [ "-Dswt.autoScale=100" ];
+      jvmArgs = [ "-Dswt.autoScale=100" "--add-opens=java.base/java.lang=ALL-UNNAMED" ];
       plugins = [
         plugins.checkstyle
         plugins.spotbugs
