@@ -13,7 +13,7 @@
 		clang
 		pandoc
 		lldb
-		python3
+		(python3.withPackages (ps: with ps; [black python-lsp-server]))
 		octave
 		pdftk
 		ghidra
@@ -27,5 +27,6 @@
 		ngrok
 		lazygit
 		openconnect
+		subversion
 	];
 }
