@@ -20,6 +20,9 @@
     networkmanager-nixpkgs = {
       url = "github:NixOS/nixpkgs/22.05";
     };
+    canvas-cli = {
+      url = "github:mbund/canvas-cli";
+    };
   };
 
   outputs = {
