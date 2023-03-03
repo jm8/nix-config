@@ -12,9 +12,6 @@
     ocamlPackages.ocaml-lsp
     rubyPackages.solargraph
     elmPackages.elm-language-server
-    python310Packages.python-lsp-server
-    python310Packages.autopep8
-    black
     nim
     clang-tools
     cmake-language-server

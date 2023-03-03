@@ -18,11 +18,14 @@
   home.keyboard = null;
 
   programs.vscode = {
-    package = pkgs.vscodium;
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
       ms-python.python
+      redhat.java
+      vscjava.vscode-java-debug
+      vscjava.vscode-java-test
     ];
     enable = true;
   };
