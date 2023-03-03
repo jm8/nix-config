@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nix-analyzer, ... }:
 {
   home.packages = with pkgs; [
     nodePackages.dockerfile-language-server-nodejs
@@ -36,5 +36,7 @@
     taplo
     zig
     zls
+  ] ++ [
+    nix-analyzer.packages.x86_64-linux.default
   ];
 }

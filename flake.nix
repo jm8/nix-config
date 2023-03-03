@@ -20,6 +20,9 @@
     networkmanager-nixpkgs = {
       url = "github:NixOS/nixpkgs/22.05";
     };
+    nix-analyzer = {
+      url = "github:jm8/nix-analyzer";
+    };
   };
 
   outputs = { nixpkgs, home-manager, hyprland, ... }@attrs:

@@ -1,30 +1,32 @@
 {pkgs, ...}: {
-	home.packages = with pkgs; [
-		comma
-		exa
-		wl-clipboard
+  home.packages = with pkgs; [
+    comma
+    exa
+    wl-clipboard
     neofetch
     zip
     unzip
     file
     bat
-		grim
-		slurp
-		clang
-		pandoc
-		lldb
-		python3
-		octave
-		pdftk
-		ghidra
-		wireshark
-		yt-dlp
-		bear
-		appimage-run
-		lilypond
-		onlyoffice-bin
-		cachix
-		ngrok
-		lazygit
-	];
+    grim
+    slurp
+    clang
+    pandoc
+    lldb
+    python3
+    octave
+    pdftk
+    ghidra
+    wireshark
+    yt-dlp
+    bear
+    appimage-run
+    lilypond
+    onlyoffice-bin
+    cachix
+    ngrok
+    lazygit
+    texlive.combined.scheme-medium
+    texlab
+  ];
 }
