@@ -29,7 +29,7 @@
     ];
     enable = true;
   };
-  
+
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     brightnessctl
@@ -52,25 +52,29 @@
     enable = true;
     enableGitCredentialHelper = true;
   };
-  
+
   home.file.".xonshrc".text = ''
     execx($(starship init xonsh))
-  ''; 
-  
+  '';
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git " ];
+    };
   };
-  
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
   };
-  
+
   programs.home-manager.enable = true;
-  
+
   manual.manpages.enable = false;
-  
+
   home.stateVersion = "22.11";
 }
