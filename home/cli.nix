@@ -35,6 +35,7 @@
       subversion
       wget
       texlive.combined.scheme-medium
+      ripgrep
     ]
     ++ [
       canvas-cli.packages.x86_64-linux.default

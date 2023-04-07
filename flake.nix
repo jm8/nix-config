@@ -22,9 +22,11 @@
     };
     nix-analyzer = {
       url = "github:jm8/nix-analyzer";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     canvas-cli = {
       url = "github:mbund/canvas-cli";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -46,6 +48,11 @@
         ];
     };
   in {
+    nix = {
+      registry = {
+        np.flake = nixpkgs;
+      };
+    };
     homeConfigurations."josh@joshframework" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = attrs;
