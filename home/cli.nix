@@ -19,6 +19,7 @@
       pandoc
       lldb
       (python3.withPackages (ps: with ps; [black python-lsp-server]))
+      nodePackages.pnpm
       octave
       pdftk
       ghidra
