@@ -1,4 +1,9 @@
-{ pkgs, hyprland, nix-analyzer, ... }: {
+{
+  pkgs,
+  hyprland,
+  nix-analyzer,
+  ...
+}: {
   imports = [
     ./cli.nix
     ./gui.nix
@@ -31,7 +36,7 @@
   };
 
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
     brightnessctl
     pamixer
     obs-studio
@@ -46,6 +51,7 @@
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.gh = {
