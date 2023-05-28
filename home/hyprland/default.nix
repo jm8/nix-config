@@ -29,8 +29,7 @@
       monitor=eDP-1,preferred,auto,1.5
 
       input {
-          kb_file=
-          kb_layout=
+          kb_layout=us
           kb_variant=
           kb_model=
           kb_options=
@@ -46,8 +45,6 @@
       }
 
       general {
-          main_mod=SUPER
-
           gaps_in=5
           gaps_out=20
           border_size=2
@@ -55,8 +52,6 @@
           col.inactive_border=0x666e738d
 
           apply_sens_to_raw=0 # whether to apply the sensitivity to raw input (e.g. used by games where you aim using your mouse)
-
-          damage_tracking=full # leave it on full unless you hate your GPU and want to make it suffer
       }
 
       decoration {
@@ -90,6 +85,8 @@
       #windowrule=tile,xyz
       #windowrule=pseudo,abc
       #windowrule=monitor 0,xyz
+
+      bindm=SUPER,mouse:272,movewindow
 
       bind=SUPER,RETURN,exec,kitty
       bind=SUPERSHIFT,F,exec,firefox

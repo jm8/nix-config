@@ -8,7 +8,7 @@
       background_opacity = "0.9";
     };
     font = {
-      name = "JetBrains Mono NL Nerd Font";
+      name = "JetBrainsMonoNL NF Regular";
     };
     extraConfig = ''
       # vim:ft=kitty
