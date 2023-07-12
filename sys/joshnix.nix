@@ -16,6 +16,7 @@
     boot.blacklistedKernelModules = ["nouveau"];
 
     hardware.nvidia.modesetting.enable = true;
+    hardware.nvidia.powerManagement.enable = true;
 
     services.xserver.videoDrivers = [
       "nvidia"

@@ -1,19 +1,14 @@
-{ pkgs, hyprland, networkmanager-nixpkgs, ... }:
+{ pkgs, networkmanager-nixpkgs, ... }:
 {
   imports = [
-    ./thunar
-    hyprland.nixosModules.default
+    ./gnome
     ./syncthing.nix
     ./cachix.nix
   ];
 
-  programs.hyprland.enable = true;
-
   virtualisation.podman.enable = true;
 
   virtualisation.docker.enable = true;
-
-  services.xserver.desktopManager.gnome.enable = true;
 
   environment.systemPackages = with pkgs; [
     git
@@ -23,7 +18,7 @@
     starship
     adw-gtk3
     adwaita-qt
-  ];
+   ];
 
   nix.settings.trusted-users = [ "root" "josh" ];
   nix.extraOptions = ''
@@ -46,8 +41,6 @@
 
   programs.steam.enable = true;
 
-  programs.dconf.enable = true;
-
   services.pipewire = {
     enable = true;
     alsa = {
@@ -55,7 +48,6 @@
     };
     pulse.enable = true;
   };
-  services.dbus.enable = true;
 
   hardware.pulseaudio.enable = false;
 

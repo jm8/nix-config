@@ -31,5 +31,7 @@
     lapce
     godot_4
     blender
+    gnome.gnome-tweaks
+    gnome.gnome-shell-extensions
   ];
 }

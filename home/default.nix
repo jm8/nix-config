@@ -8,11 +8,9 @@
     ./cli.nix
     ./gui.nix
     ./helix
-    ./hyprland
     ./kitty
     ./waybar
     ./cursor
-    ./rofi
     ./xdg.nix
     hyprland.homeManagerModules.default
   ];
