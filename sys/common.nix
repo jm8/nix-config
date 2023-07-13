@@ -1,7 +1,7 @@
 { pkgs, networkmanager-nixpkgs, ... }:
 {
   imports = [
-    ./gnome
+    ./plasma
     ./syncthing.nix
     ./cachix.nix
   ];
