@@ -12,7 +12,6 @@
     ./waybar
     ./cursor
     ./xdg.nix
-    ./plasma
     hyprland.homeManagerModules.default
   ];
 
