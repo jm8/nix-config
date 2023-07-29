@@ -7,7 +7,10 @@
   programs.dconf.enable = true;
   services.dbus.enable = true;
 
+  nixpkgs.config.firefox.enableGnomeExtensions = true;
+
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.pop-shell
+    gnomeExtensions.material-shell
+    gnomeExtensions.unite
   ];
 }

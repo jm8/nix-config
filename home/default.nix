@@ -12,6 +12,7 @@
     ./waybar
     ./cursor
     ./xdg.nix
+    ./dconf.nix
     hyprland.homeManagerModules.default
   ];
 
