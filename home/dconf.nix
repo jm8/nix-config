@@ -7,7 +7,7 @@ with lib.hm.gvariant;
   dconf.settings = {
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "gr+polytonic" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" ];
+      xkb-options = [ "caps:escape" ];
     };
 
     "org/gnome/desktop/interface" = {
@@ -102,6 +102,7 @@ with lib.hm.gvariant;
     "org/gnome/mutter" = {
       edge-tiling = false;
       workspaces-only-on-primary = true;
+      experimental-features = ["scale-monitor-framebuffer"];
     };
 
     "org/gnome/mutter/keybindings" = {
