@@ -22,16 +22,7 @@
   home.keyboard = null;
 
   programs.vscode = {
-    package = pkgs.symlinkJoin {
-      name = "vscode";
-      pname = "vscode";
-      paths = [pkgs.vscode];
-      buildInputs = [pkgs.makeWrapper];
-      postBuild = ''
-        wrapProgram $out/bin/code --add-flags --ozone-platform=wayland
-      '';
-
-    };
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
@@ -78,6 +69,9 @@
     oh-my-zsh = {
       enable = true;
       plugins = [ "git " ];
+    };
+    shellAliases = {
+      code = "code --ozone-platform=wayland";
     };
   };
 
