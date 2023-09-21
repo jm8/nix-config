@@ -6,7 +6,7 @@
   home.packages = with pkgs;
     [
       comma
-      exa
+      eza
       wl-clipboard
       neofetch
       zip
@@ -18,7 +18,10 @@
       clang
       pandoc
       lldb
-      (python3.withPackages (ps: with ps; [black python-lsp-server]))
+      (python3.withPackages (ps: with ps; [black python-lsp-server requests]))
+      bun
+      deno
+      nodejs
       nodePackages.pnpm
       octave
       pdftk
@@ -35,8 +38,10 @@
       openconnect
       subversion
       wget
-      texlive.combined.scheme-medium
+      texlive.combined.scheme-full
       ripgrep
+      typst
+      typst-lsp
     ]
     ++ [
       canvas-cli.packages.x86_64-linux.default

@@ -1,5 +1,8 @@
-{ pkgs, networkmanager-nixpkgs, ... }:
 {
+  pkgs,
+  networkmanager-nixpkgs,
+  ...
+}: {
   imports = [
     ./gnome
     ./syncthing.nix
@@ -18,9 +21,9 @@
     starship
     adw-gtk3
     adwaita-qt
-   ];
+  ];
 
-  nix.settings.trusted-users = [ "root" "josh" ];
+  nix.settings.trusted-users = ["root" "josh"];
   nix.extraOptions = ''
     # enable the new standalone nix commands
     experimental-features = nix-command flakes
@@ -58,36 +61,53 @@
     ];
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-    "nvidia-x11"
-    "nvidia-settings"
-    "steam"
-    "steam-run"
-    "steam-original"
-    "steam-runtime"
-    "steam-run"
-    "nvidia-persistenced"
-    "zoom"
-  ];
+  services.printing.browsing = true;
+  services.printing.browsedConf = ''
+    BrowseDNSSDSubTypes _cups,_print
+    BrowseLocalProtocols all
+    BrowseRemoteProtocols all
+    CreateIPPPrinterQueues All
+
+    BrowseProtocols all
+  '';
+  services.avahi = {
+    enable = true;
+    nssmdns = true;
+  };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (pkgs.lib.getName pkg) [
+      "nvidia-x11"
+      "nvidia-settings"
+      "steam"
+      "steam-run"
+      "steam-original"
+      "steam-runtime"
+      "steam-run"
+      "nvidia-persistenced"
+      "zoom"
+    ];
 
   time.timeZone = "America/New_York";
 
   users.users = {
     josh = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "libvirtd" "kvm" "docker" ];
+      extraGroups = ["wheel" "libvirtd" "kvm" "docker"];
       uid = 1000;
       hashedPassword = "$6$4vtL8Do8lVPwnN9o$z2ub/5/28W/HBRyRG0aZcd3IoesQEHhRXKmiDjxxO7lI.XpCjwIpE/z1oP3prwd8eLE88EMdzzhWEjvJOb5Bz0";
     };
   };
-  
+
   programs.xonsh = {
     enable = true;
   };
-  
+
   programs.zsh = {
     enable = true;
   };
+
+  services.tailscale.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
 }
