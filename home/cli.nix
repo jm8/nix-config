@@ -18,7 +18,14 @@
       clang
       pandoc
       lldb
-      (python3.withPackages (ps: with ps; [black python-lsp-server requests]))
+      (python3.withPackages (ps:
+        with ps; [
+          # black
+          # python-lsp-server
+          # requests
+          pwntools
+          # pycryptodome
+        ]))
       bun
       deno
       nodejs

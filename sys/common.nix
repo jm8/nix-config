@@ -110,4 +110,8 @@
   services.tailscale.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
+
+  networking.hosts = {
+    "10.10.0.237" = ["chall.pwnoh.io" "ohio-instruments-84.chall.pwnoh.io" "infinity.chall.pwnoh.io" "area51.chall.pwnoh.io" "sentiment.chall.pwnoh.io"];
+  };
 }

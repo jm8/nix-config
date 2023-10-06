@@ -68,10 +68,13 @@
     enableSyntaxHighlighting = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git " ];
+      plugins = ["git"];
+      extraConfig = ''
+        zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+      '';
     };
     shellAliases = {
-      code = "code --ozone-platform=wayland";
+      # code = "code --ozone-platform=wayland";
     };
   };
 
