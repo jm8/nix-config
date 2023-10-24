@@ -62,6 +62,10 @@
     execx($(starship init xonsh))
   '';
 
+  home.sessionVariables = {
+    NIX_ANALYZER_HOME_MANAGER = "1";
+  };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;

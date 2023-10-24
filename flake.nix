@@ -45,6 +45,7 @@
           "ngrok"
           "code"
           "vscode"
+          "terraform"
         ];
     };
   in {

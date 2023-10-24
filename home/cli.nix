@@ -23,7 +23,7 @@
           # black
           # python-lsp-server
           # requests
-          pwntools
+          # pwntools
           # pycryptodome
         ]))
       bun
@@ -49,6 +49,8 @@
       ripgrep
       typst
       typst-lsp
+      terraform
+      awscli2
     ]
     ++ [
       canvas-cli.packages.x86_64-linux.default
