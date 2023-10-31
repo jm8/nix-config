@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     xdg-utils
   ];
@@ -12,5 +11,14 @@
     music = /home/josh/data/music;
     pictures = /home/josh/data/pictures;
     videos = /home/josh/data/videos;
+  };
+
+  xdg.mimeApps.defaultApplications = {
+  };
+
+  xdg.mimeApps.associations.added = {
+  };
+
+  xdg.mimeApps.associations.removed = {
   };
 }
