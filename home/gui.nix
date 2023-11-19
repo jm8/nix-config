@@ -35,5 +35,7 @@
     gnome.gnome-shell-extensions
     gnomeExtensions.just-perfection
     calibre
+    beekeeper-studio
+    tor-browser-bundle-bin
   ];
 }
