@@ -1,24 +1,26 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, networkmanager-nixpkgs, modulesPath, lib, ... }:
-
 {
-  imports =
-    [
-      (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  config,
+  pkgs,
+  networkmanager-nixpkgs,
+  modulesPath,
+  lib,
+  ...
+}: {
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   networking.hostName = "joshframework";
 
   nixpkgs.overlays = [
-    (final: prev:
-      let nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
-      in
-      {
-        inherit (nmpkgs) wpa_supplicant;
-      })
+    (final: prev: let
+      nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
+    in {
+      inherit (nmpkgs) wpa_supplicant;
+    })
   ];
 
   services.usbmuxd.enable = true;
@@ -36,46 +38,42 @@
     enable = true;
   };
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
-  boot.blacklistedKernelModules = [ "hid_sensor_hub" ]; # fix brightness keys on 12th gen intel framework
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod"];
+  boot.blacklistedKernelModules = ["hid_sensor_hub"]; # fix brightness keys on 12th gen intel framework
+  boot.initrd.kernelModules = [];
+  boot.kernelModules = ["kvm-intel"];
+  boot.extraModulePackages = [];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  fileSystems."/" =
-    {
-      device = "/dev/mapper/root";
-      fsType = "btrfs";
-      options = [ "subvol=root" ];
-      neededForBoot = true;
-    };
+  fileSystems."/" = {
+    device = "/dev/mapper/root";
+    fsType = "btrfs";
+    options = ["subvol=root"];
+    neededForBoot = true;
+  };
 
   boot.initrd.luks.devices."root" = {
     device = "/dev/disk/by-label/root";
     allowDiscards = true;
   };
 
-  fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-label/boot";
-      fsType = "vfat";
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-label/boot";
+    fsType = "vfat";
+  };
 
-  fileSystems."/nix" =
-    {
-      device = "/dev/mapper/root";
-      fsType = "btrfs";
-      options = [ "subvol=nix" "compress=zstd" "noatime" ];
-    };
+  fileSystems."/nix" = {
+    device = "/dev/mapper/root";
+    fsType = "btrfs";
+    options = ["subvol=nix" "compress=zstd" "noatime"];
+  };
 
-  fileSystems."/swap" =
-    {
-      device = "/dev/mapper/root";
-      fsType = "btrfs";
-      options = [ "subvol=swap" "compress=none" "noatime" ];
-    };
+  fileSystems."/swap" = {
+    device = "/dev/mapper/root";
+    fsType = "btrfs";
+    options = ["subvol=swap" "compress=none" "noatime"];
+  };
 
   zramSwap.enable = true;
   swapDevices = [
@@ -84,8 +82,6 @@
       size = 8 * 1024;
     }
   ];
-
-  boot.supportedFilesystems = [ "ntfs" ];
 
   services.fstrim.enable = true;
   services.btrfs.autoScrub.enable = true;
@@ -118,4 +114,3 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
 }
-

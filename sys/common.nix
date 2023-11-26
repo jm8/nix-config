@@ -110,4 +110,6 @@
   services.tailscale.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
+
+  boot.supportedFilesystems = ["ntfs"];
 }
