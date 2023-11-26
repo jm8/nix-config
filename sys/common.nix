@@ -13,6 +13,8 @@
 
   virtualisation.docker.enable = true;
 
+  programs.singularity.enable = true;
+
   environment.systemPackages = with pkgs; [
     git
     vim
@@ -112,4 +114,13 @@
   users.defaultUserShell = pkgs.zsh;
 
   boot.supportedFilesystems = ["ntfs"];
+
+  networking.hosts = {
+    "10.10.0.237" = ["chall.pwnoh.io" "ohio-instruments-84.chall.pwnoh.io" "infinity.chall.pwnoh.io" "area51.chall.pwnoh.io" "sentiment.chall.pwnoh.io"];
+  };
+
+  networking.firewall.allowedTCPPorts = [
+    1720
+    5060
+  ];
 }

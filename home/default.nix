@@ -62,16 +62,23 @@
     execx($(starship init xonsh))
   '';
 
+  home.sessionVariables = {
+    NIX_ANALYZER_HOME_MANAGER = "1";
+  };
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git " ];
+      plugins = ["git"];
+      extraConfig = ''
+        zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+      '';
     };
     shellAliases = {
-      code = "code --ozone-platform=wayland";
+      # code = "code --ozone-platform=wayland";
     };
   };
 
