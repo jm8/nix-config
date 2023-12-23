@@ -8,11 +8,7 @@
     unzip
     file
     bat
-    grim
-    slurp
-    clang
     pandoc
-    lldb
     (python3.withPackages (ps:
       with ps; [
         # black
@@ -32,15 +28,10 @@
     yt-dlp
     bear
     appimage-run
-    lilypond
     onlyoffice-bin
     cachix
     ngrok
-    lazygit
-    openconnect
-    subversion
     wget
-    texlive.combined.scheme-full
     ripgrep
     typst
     typst-lsp
