@@ -37,5 +37,6 @@
     calibre
     beekeeper-studio
     tor-browser-bundle-bin
+    pcsx2
   ];
 }
