@@ -28,11 +28,16 @@
       url = "github:mbund/canvas-cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    nix-index-database,
     hyprland,
     ...
   } @ attrs: let
@@ -59,6 +64,7 @@
       extraSpecialArgs = attrs;
       modules = [
         ./home
+        nix-index-database.hmModules.nix-index
       ];
     };
 
@@ -67,6 +73,7 @@
       extraSpecialArgs = attrs;
       modules = [
         ./home
+        nix-index-database.hmModules.nix-index
       ];
     };
 

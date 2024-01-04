@@ -82,6 +82,8 @@
     };
   };
 
+  programs.nix-index.enable = true;
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
