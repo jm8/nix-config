@@ -13,6 +13,7 @@
     ./cursor
     ./xdg.nix
     ./dconf.nix
+    ./neovim.nix
     hyprland.homeManagerModules.default
   ];
 
