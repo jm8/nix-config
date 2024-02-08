@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, canvas-cli, ...}: {
   home.packages = with pkgs; [
     comma
     eza
@@ -37,5 +37,10 @@
     typst-lsp
     terraform
     awscli2
+    just
+    anki-bin
+    zellij
+  ] ++ [
+    canvas-cli.packages.x86_64-linux.default
   ];
 }

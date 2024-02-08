@@ -2,9 +2,9 @@
   description = "josh's home";
 
   inputs = {
-    nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
-    };
+    # nixpkgs = {
+    #   url = "github:NixOS/nixpkgs/nixos-unstable";
+    # };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +26,6 @@
     };
     canvas-cli = {
       url = "github:mbund/canvas-cli";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
@@ -38,7 +37,7 @@
     nixpkgs,
     home-manager,
     nix-index-database,
-    hyprland,
+    # hyprland,
     ...
   } @ attrs: let
     system = "x86_64-linux";

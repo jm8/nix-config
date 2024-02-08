@@ -1,3 +1,6 @@
-# [[language]]
-# name = "nix"
-# language-server = { command = "/home/josh/dev/nix-analyzer/nix-analyzer" }
+[[language]]
+name = "nix"
+language-servers = ["nix-analyzer"]
+
+[language-server.nix-analyzer]
+command = "/home/josh/dev/nix-analyzer/nix-analyzer"

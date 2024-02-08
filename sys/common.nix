@@ -10,7 +10,7 @@
   ];
 
   virtualisation.podman.enable = true;
-
+  virtualisation.waydroid.enable = true;
   virtualisation.docker.enable = true;
 
   programs.singularity.enable = true;
@@ -23,6 +23,7 @@
     starship
     adw-gtk3
     adwaita-qt
+    openconnect
   ];
 
   nix.settings.trusted-users = ["root" "josh"];
@@ -95,7 +96,7 @@
   users.users = {
     josh = {
       isNormalUser = true;
-      extraGroups = ["wheel" "libvirtd" "kvm" "docker"];
+      extraGroups = ["wheel" "libvirtd" "kvm" "docker" "adbusers"];
       uid = 1000;
       hashedPassword = "$6$4vtL8Do8lVPwnN9o$z2ub/5/28W/HBRyRG0aZcd3IoesQEHhRXKmiDjxxO7lI.XpCjwIpE/z1oP3prwd8eLE88EMdzzhWEjvJOb5Bz0";
     };
@@ -123,4 +124,6 @@
     1720
     5060
   ];
+
+  programs.adb.enable = true;
 }

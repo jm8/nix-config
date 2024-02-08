@@ -83,6 +83,14 @@
     };
   };
 
+  programs.zellij = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      theme = "catppuccin-mocha";
+    };
+  };
+
   programs.nix-index.enable = true;
 
   programs.starship = {
