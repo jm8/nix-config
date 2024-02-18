@@ -40,6 +40,8 @@
     just
     anki-bin
     zellij
+    zathura
+    nodePackages.cspell
   ] ++ [
     canvas-cli.packages.x86_64-linux.default
   ];

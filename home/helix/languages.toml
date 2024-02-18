@@ -2,5 +2,16 @@
 name = "nix"
 language-servers = ["nix-analyzer"]
 
+[[language]]
+name = "python"
+roots = ["pyproject.toml", "setup.py", "Poetry.lock", ".git"]
+language-servers = ["pyright"]
+auto-format = true
+formatter = {command = 'black', args = ["--quiet", "-"]}
+
 [language-server.nix-analyzer]
-command = "/home/josh/dev/nix-analyzer/nix-analyzer"
+command = "/home/josh/dev/nix-analyzer/outputs/out/bin/nix-analyzer"
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"] 
