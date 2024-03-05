@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    # ./kde
     ./gnome
     ./syncthing.nix
     ./cachix.nix

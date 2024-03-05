@@ -34,10 +34,6 @@
     driSupport32Bit = true;
   };
 
-  services.xserver.displayManager.gdm = {
-    enable = true;
-  };
-
   boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod"];
   boot.blacklistedKernelModules = ["hid_sensor_hub"]; # fix brightness keys on 12th gen intel framework
   boot.initrd.kernelModules = [];

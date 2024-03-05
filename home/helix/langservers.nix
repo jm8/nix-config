@@ -40,6 +40,6 @@
       zls
     ]
     ++ [
-      nix-analyzer.packages.x86_64-linux.default
+      # nix-analyzer.packages.x86_64-linux.default
     ];
 }

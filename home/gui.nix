@@ -26,7 +26,7 @@
     zoom-us
     vlc
     ffmpeg
-    musescore
+    # musescore
     prismlauncher
     lapce
     godot_4
@@ -36,7 +36,7 @@
     gnomeExtensions.just-perfection
     calibre
     beekeeper-studio
-    tor-browser-bundle-bin
+    # tor-browser-bundle-bin
     pcsx2
   ];
 }
