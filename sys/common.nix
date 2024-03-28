@@ -13,8 +13,10 @@
   virtualisation.podman.enable = true;
   virtualisation.waydroid.enable = true;
   virtualisation.docker.enable = true;
-
   programs.singularity.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
 
   environment.systemPackages = with pkgs; [
     git

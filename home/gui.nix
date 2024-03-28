@@ -38,5 +38,6 @@
     beekeeper-studio
     # tor-browser-bundle-bin
     pcsx2
+    gnome.gnome-boxes
   ];
 }
