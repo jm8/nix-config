@@ -10,7 +10,8 @@ auto-format = true
 formatter = {command = 'black', args = ["--quiet", "-"]}
 
 [language-server.nix-analyzer]
-command = "/home/josh/dev/nix-analyzer/outputs/out/bin/nix-analyzer"
+# command = "/home/josh/dev/nix-analyzer/outputs/out/bin/nix-analyzer"
+command = "/home/josh/dev/nix-analyzer-ffi/target/debug/lsp"
 
 [language-server.pyright]
 command = "pyright-langserver"
@@ -18,3 +19,6 @@ args = ["--stdio"]
 
 [language-server.vscode-json-language-server]
 command = "json-languageserver"
+
+[language-server.texlab.build]
+onSave = true

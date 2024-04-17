@@ -42,6 +42,10 @@
     zellij
     zathura
     nodePackages.cspell
+    texlive.combined.scheme-full
+    litecli
+    texlab
+    jq
   ] ++ [
     canvas-cli.packages.x86_64-linux.default
   ];

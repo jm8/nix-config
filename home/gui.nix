@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, nixpkgs-zed, ...}: {
   home.packages = with pkgs; [
     gimp
     audacity
@@ -39,5 +39,6 @@
     # tor-browser-bundle-bin
     pcsx2
     gnome.gnome-boxes
+    zed-editor
   ];
 }

@@ -1,6 +1,7 @@
 {
   pkgs,
   networkmanager-nixpkgs,
+  nixpkgs,
   ...
 }: {
   imports = [
@@ -29,6 +30,8 @@
     openconnect
   ];
 
+  environment.variables.NO_AT_BRIDGE = "1";
+
   nix.settings.trusted-users = ["root" "josh"];
   nix.extraOptions = ''
     # enable the new standalone nix commands
@@ -46,6 +49,10 @@
     automatic = true;
     dates = "weekly";
     options = "";
+  };
+  nix.registry = {
+    nixpkgs.flake = nixpkgs;
+    np.flake = nixpkgs;
   };
 
   programs.steam.enable = true;
@@ -105,17 +112,10 @@
     };
   };
 
-  programs.xonsh = {
-    enable = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-  };
-
   services.tailscale.enable = true;
 
-  users.defaultUserShell = pkgs.zsh;
+  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   boot.supportedFilesystems = ["ntfs"];
 

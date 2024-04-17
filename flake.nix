@@ -2,9 +2,12 @@
   description = "josh's home";
 
   inputs = {
-    # nixpkgs = {
-    #   url = "github:NixOS/nixpkgs/nixos-unstable";
-    # };
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
+    nixpkgs-zed = {
+      url = "github:GaetanLepage/nixpkgs/zed";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +40,8 @@
     nixpkgs,
     home-manager,
     nix-index-database,
-    # hyprland,
+    networkmanager-nixpkgs,
+    nixpkgs-zed,
     ...
   } @ attrs: let
     system = "x86_64-linux";
@@ -51,13 +55,17 @@
           "vscode"
           "terraform"
         ];
+      overlays = [
+        (final: prev: let
+          nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
+          zedpkgs = nixpkgs-zed.legacyPackages.x86_64-linux;
+        in {
+          inherit (nmpkgs) wpa_supplicant;
+          inherit (zedpkgs) zed-editor;
+        })
+      ];
     };
   in {
-    nix = {
-      registry = {
-        np.flake = nixpkgs;
-      };
-    };
     homeConfigurations."josh@joshframework" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = attrs;
