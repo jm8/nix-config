@@ -46,6 +46,8 @@
     litecli
     texlab
     jq
+    libre-baskerville
+    open-sans
   ] ++ [
     canvas-cli.packages.x86_64-linux.default
   ];

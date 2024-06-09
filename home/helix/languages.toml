@@ -11,7 +11,7 @@ formatter = {command = 'black', args = ["--quiet", "-"]}
 
 [language-server.nix-analyzer]
 # command = "/home/josh/dev/nix-analyzer/outputs/out/bin/nix-analyzer"
-command = "/home/josh/dev/nix-analyzer-ffi/target/debug/lsp"
+command = "/home/josh/dev/nix-analyzer-cpnp/nix-analyzer/target/debug/lsp"
 
 [language-server.pyright]
 command = "pyright-langserver"
