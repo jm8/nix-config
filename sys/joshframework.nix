@@ -5,7 +5,6 @@
   config,
   pkgs,
   networkmanager-nixpkgs,
-  nixpkgs-zed,
   modulesPath,
   lib,
   ...

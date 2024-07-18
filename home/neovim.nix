@@ -218,7 +218,7 @@
       map <C-h> <cmd>bprevious<cr>
       map <C-s> <cmd>w<cr>
       map <C-q> <cmd>xa<cr>
-      autocmd BufWritePre * lua vim.lsp.buf.format() 
+      autocmd BufWritePre * lua vim.lsp.buf.format()
     '';
   };
 }

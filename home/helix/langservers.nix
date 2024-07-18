@@ -25,9 +25,7 @@
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
       # nodePackages.vls
-      nodePackages.vscode-css-languageserver-bin
-      nodePackages.vscode-html-languageserver-bin
-      nodePackages.vscode-json-languageserver-bin
+      nodePackages.vscode-langservers-extracted
       nodePackages.yaml-language-server
       # ocamlPackages.ocaml-lsp
       pyright

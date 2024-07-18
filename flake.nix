@@ -5,17 +5,14 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
-    nixpkgs-zed = {
-      url = "github:GaetanLepage/nixpkgs/zed";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    helix = {
-      url = "github:helix-editor/helix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # helix = {
+    #   url = "github:helix-editor/helix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     hyprland = {
       url = "github:hyprwm/hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,7 +38,6 @@
     home-manager,
     nix-index-database,
     networkmanager-nixpkgs,
-    nixpkgs-zed,
     ...
   } @ attrs: let
     system = "x86_64-linux";
@@ -56,13 +52,13 @@
           "terraform"
         ];
       overlays = [
-        (final: prev: let
-          nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
-          zedpkgs = nixpkgs-zed.legacyPackages.x86_64-linux;
-        in {
-          inherit (nmpkgs) wpa_supplicant;
-          inherit (zedpkgs) zed-editor;
-        })
+        (
+          final: prev: let
+            nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
+          in {
+            inherit (nmpkgs) wpa_supplicant;
+          }
+        )
       ];
     };
   in {
@@ -79,7 +75,7 @@
       inherit pkgs;
       extraSpecialArgs = attrs;
       modules = [
-        ./home
+        ./home/kitty
         nix-index-database.hmModules.nix-index
       ];
     };

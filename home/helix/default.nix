@@ -1,7 +1,7 @@
 {
   lib,
   pkgs,
-  helix,
+  # helix,
   ...
 }: {
   imports = [
@@ -9,7 +9,8 @@
   ];
 
   home.packages = with pkgs; [
-    helix.packages.x86_64-linux.default
+    # helix.packages.x86_64-linux.default
+    helix
   ];
 
   home.sessionVariables = rec {
