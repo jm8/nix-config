@@ -12,4 +12,6 @@
     gnomeExtensions.material-shell
     gnomeExtensions.unite
   ];
+
+  xdg.portal.gtkUsePortal = true;
 }

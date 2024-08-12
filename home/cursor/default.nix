@@ -31,11 +31,12 @@
 #     };
 #   };
 # in
-{
-  home.pointerCursor = {
-    package = pkgs.quintom-cursor-theme;
-    name = "Quintom_Snow";
-    gtk.enable = true;
-    size = 24;
-  };
-}
+# {
+#   home.pointerCursor = {
+#     package = pkgs.quintom-cursor-theme;
+#     name = "Quintom_Snow";
+#     gtk.enable = true;
+#     size = 24;
+#   };
+# }
+{}

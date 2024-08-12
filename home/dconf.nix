@@ -65,7 +65,7 @@ with lib.hm.gvariant; {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-size = 24;
-      cursor-theme = "breeze_cursors";
+      # cursor-theme = "breeze_cursors";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
