@@ -1,6 +1,5 @@
 {
   pkgs,
-  hyprland,
   nix-analyzer,
   ...
 }: {
@@ -14,11 +13,7 @@
     ./xdg.nix
     ./dconf.nix
     ./neovim.nix
-    hyprland.homeManagerModules.default
   ];
-
-  home.username = "josh";
-  home.homeDirectory = "/home/josh";
 
   home.keyboard = null;
 
@@ -52,6 +47,22 @@
     enable = true;
     # enableFishIntegration = true;
     nix-direnv.enable = true;
+  };
+
+  manual.manpages.enable = true;
+
+  programs.man = {
+    enable = true;
+    generateCaches = true;
+  };
+
+  programs.git = {
+    enable = true;
+    ignores = [
+      ".direnv"
+    ];
+    userEmail = "jm8hjkl@gmail.com";
+    userName = "Joshua Sims";
   };
 
   programs.gh = {
@@ -265,8 +276,4 @@
   programs.nix-index.enable = true;
 
   programs.home-manager.enable = true;
-
-  manual.manpages.enable = false;
-
-  home.stateVersion = "22.11";
 }

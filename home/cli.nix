@@ -40,6 +40,7 @@
       ripgrep
       typst
       typst-lsp
+      dconf2nix
       # terraform
       awscli2
       just

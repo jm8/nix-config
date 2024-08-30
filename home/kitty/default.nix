@@ -4,13 +4,15 @@
     settings = {
       window_padding_width = 4;
       confirm_os_window_close = 0;
-      background_opacity = "0.9";
+      background_opacity = "1.0";
       shell = "fish";
     };
     font = {
       name = "JetBrainsMonoNL NF Regular";
     };
     extraConfig = ''
+      # linux_display_server X11 
+
       # vim:ft=kitty
 
       ## name:     Catppuccin Kitty Diff Mocha
@@ -18,8 +20,6 @@
       ## license:  MIT
       ## upstream: https://github.com/catppuccin/kitty/blob/main/macchiato.conf
       ## blurb:    Soothing pastel theme for the high-spirited!
-
-
 
       # The basic colors
       foreground              #CAD3F5

@@ -250,8 +250,8 @@ with lib.hm.gvariant; {
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super>Return";
-      command = "kitty";
-      name = "kitty";
+      command = "gnome-terminal";
+      name = "gnome-terminal";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
@@ -353,6 +353,69 @@ with lib.hm.gvariant; {
       foreground-color = "#000000000000";
       palette = "#2E2E34343636:#CCCC00000000:#4E4E9A9A0606:#C4C4A0A00000:#34346565A4A4:#757550507B7B:#060698209A9A:#D3D3D7D7CFCF:#555557575353:#EFEF29292929:#8A8AE2E23434:#FCFCE9E94F4F:#72729F9FCFCF:#ADAD7F7FA8A8:#3434E2E2E2E2:#EEEEEEEEECEC";
       visible-name = "Default";
+    };
+
+    "org/gnome/terminal/legacy/profiles:" = {
+      default = "5083e06b-024e-46be-9cd2-892b814f1fc8";
+      list = [ "b1dcc9dd-5262-4d8d-a863-c897e6d979b9" "de8a9081-8352-4ce4-9519-5de655ad9361" "71a9971e-e829-43a9-9b2f-4565c855d664" "5083e06b-024e-46be-9cd2-892b814f1fc8" "95894cfd-82f7-430d-af6e-84d168bc34f5" ];
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:5083e06b-024e-46be-9cd2-892b814f1fc8" = {
+      background-color = "#24273a";
+      cursor-background-color = "#f4dbd6";
+      cursor-colors-set = true;
+      cursor-foreground-color = "#24273a";
+      custom-command = "fish";
+      foreground-color = "#cad3f5";
+      highlight-background-color = "#f4dbd6";
+      highlight-colors-set = true;
+      highlight-foreground-color = "#5b6078";
+      palette = [ "#494d64" "#ed8796" "#a6da95" "#eed49f" "#8aadf4" "#f5bde6" "#8bd5ca" "#b8c0e0" "#5b6078" "#ed8796" "#a6da95" "#eed49f" "#8aadf4" "#f5bde6" "#8bd5ca" "#a5adcb" ];
+      use-custom-command = true;
+      use-theme-colors = false;
+      visible-name = "Catppuccin Macchiato";
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:71a9971e-e829-43a9-9b2f-4565c855d664" = {
+      background-color = "#303446";
+      cursor-background-color = "#f2d5cf";
+      cursor-colors-set = true;
+      cursor-foreground-color = "#303446";
+      foreground-color = "#c6d0f5";
+      highlight-background-color = "#f2d5cf";
+      highlight-colors-set = true;
+      highlight-foreground-color = "#626880";
+      palette = [ "#51576d" "#e78284" "#a6d189" "#e5c890" "#8caaee" "#f4b8e4" "#81c8be" "#b5bfe2" "#626880" "#e78284" "#a6d189" "#e5c890" "#8caaee" "#f4b8e4" "#81c8be" "#a5adce" ];
+      use-theme-colors = false;
+      visible-name = "Catppuccin Frappe";
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:95894cfd-82f7-430d-af6e-84d168bc34f5" = {
+      background-color = "#1e1e2e";
+      cursor-background-color = "#f5e0dc";
+      cursor-colors-set = true;
+      cursor-foreground-color = "#1e1e2e";
+      foreground-color = "#cdd6f4";
+      highlight-background-color = "#f5e0dc";
+      highlight-colors-set = true;
+      highlight-foreground-color = "#585b70";
+      palette = [ "#45475a" "#f38ba8" "#a6e3a1" "#f9e2af" "#89b4fa" "#f5c2e7" "#94e2d5" "#bac2de" "#585b70" "#f38ba8" "#a6e3a1" "#f9e2af" "#89b4fa" "#f5c2e7" "#94e2d5" "#a6adc8" ];
+      use-theme-colors = false;
+      visible-name = "Catppuccin Mocha";
+    };
+
+    "org/gnome/terminal/legacy/profiles:/:de8a9081-8352-4ce4-9519-5de655ad9361" = {
+      background-color = "#eff1f5";
+      cursor-background-color = "#dc8a78";
+      cursor-colors-set = true;
+      cursor-foreground-color = "#eff1f5";
+      foreground-color = "#4c4f69";
+      highlight-background-color = "#dc8a78";
+      highlight-colors-set = true;
+      highlight-foreground-color = "#acb0be";
+      palette = [ "#5c5f77" "#d20f39" "#40a02b" "#df8e1d" "#1e66f5" "#ea76cb" "#179299" "#acb0be" "#6c6f85" "#d20f39" "#40a02b" "#df8e1d" "#1e66f5" "#ea76cb" "#179299" "#bcc0cc" ];
+      use-theme-colors = false;
+      visible-name = "Catppuccin Latte";
     };
   };
 }
