@@ -39,9 +39,9 @@
 
   fonts.fontconfig.enable = true;
 
-  programs.firefox = {
-    enable = true;
-  };
+  # programs.firefox = {
+  #   enable = true;
+  # };
 
   programs.direnv = {
     enable = true;
@@ -269,7 +269,9 @@
     enableFishIntegration = true;
     settings = {
       theme = "catppuccin-mocha";
+      default_layout = "compact";
       default_shell = "fish";
+      pane_frames = false;
     };
   };
 

@@ -65,15 +65,16 @@ with lib.hm.gvariant; {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-size = 24;
-      # cursor-theme = "breeze_cursors";
       enable-animations = true;
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "Noto Sans,  10";
-      icon-theme = "breeze-dark";
-      text-scaling-factor = 1.0;
       toolbar-style = "text";
+      document-font-name = "JetBrainsMonoNL Nerd Font Propo 11";
+      font-name = "JetBrainsMonoNL Nerd Font Propo 10";
+      monospace-font-name = "JetBrainsMonoNL Nerd Font Mono 10";
+      show-battery-percentage=true;
+      text-scaling-factor=1.5;
     };
 
     "org/gnome/desktop/notifications" = {

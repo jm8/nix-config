@@ -39,5 +39,7 @@
     # tor-browser-bundle-bin
     pcsx2
     gnome.gnome-boxes
+    gnuradio
+    dbeaver-bin
   ];
 }

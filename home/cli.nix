@@ -54,6 +54,15 @@
       jq
       libre-baskerville
       open-sans
+      netcat-openbsd
+      npins
+      binutils
+      flyctl
+      supabase-cli
+      strace
+      gdb
+      pwndbg
+      uv
     ]
     ++ [
       canvas-cli.packages.x86_64-linux.default
