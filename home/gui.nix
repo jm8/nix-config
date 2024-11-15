@@ -1,45 +1,25 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home.packages = with pkgs; [
-    gimp
+    (config.lib.nixGL.wrap godot_4)
+    # (config.lib.nixGL.wrap pcsx2)
+    (config.lib.nixGL.wrap prismlauncher)
     audacity
-    inkscape
-    element-desktop-wayland
-    (with eclipses;
-      eclipseWithPlugins {
-        eclipse = eclipse-java;
-        jvmArgs = ["-Dswt.autoScale=100" "--add-opens=java.base/java.lang=ALL-UNNAMED"];
-        plugins = [
-          plugins.checkstyle
-          plugins.spotbugs
-          # (plugins.buildEclipseUpdateSite rec {
-          #   name = "subclipse-${version}";
-          #   version = "4.3.0";
-          #   src = fetchzip {
-          #     stripRoot = false;
-          #     url = "https://subclipse.github.io/updates/subclipse/subclipse-${version}.zip";
-          #     sha256 = "sha256-9N4tuvh/ByhwC/nFDQO/Ow0FDq15vw/XWMxOrY7Y36Y=";
-          #   };
-          # })
-        ];
-      })
-    chromium
-    zoom-us
-    vlc
-    ffmpeg
-    # musescore
-    prismlauncher
-    lapce
-    godot_4
-    blender
-    gnome.gnome-tweaks
-    gnome.gnome-shell-extensions
-    gnomeExtensions.just-perfection
-    calibre
     beekeeper-studio
-    # tor-browser-bundle-bin
-    pcsx2
-    gnome.gnome-boxes
-    gnuradio
-    dbeaver-bin
+    blender
+    calibre
+    chromium
+    gimp
+    gnome-boxes
+    gnome-shell-extensions
+    gnome-tweaks
+    gnomeExtensions.just-perfection
+    inkscape
+    lapce
+    obs-studio
+    vlc
   ];
 }

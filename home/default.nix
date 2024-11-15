@@ -1,4 +1,5 @@
 {
+  nixpkgs,
   pkgs,
   nix-analyzer,
   nixGL,
@@ -9,12 +10,8 @@
     ./cli.nix
     ./gui.nix
     ./helix
-    ./kitty
-    ./waybar
-    ./cursor
     ./xdg.nix
     ./dconf.nix
-    ./neovim.nix
     ./alacritty.nix
   ];
 
@@ -35,9 +32,8 @@
 
   home.packages = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
-    brightnessctl
-    pamixer
-    obs-studio
+    libre-baskerville
+    open-sans
   ];
 
   fonts.fontconfig.enable = true;
@@ -70,12 +66,8 @@
 
   programs.gh = {
     enable = true;
-    enableGitCredentialHelper = true;
+    gitCredentialHelper.enable = true;
   };
-
-  home.file.".xonshrc".text = ''
-    execx($(starship init xonsh))
-  '';
 
   programs.fish = {
     enable = true;
@@ -288,4 +280,25 @@
 
   nixGL.packages = nixGL.packages;
   nixGL.defaultWrapper = "mesa";
+
+  nix.channels = {
+    inherit nixpkgs;
+  };
+
+  nix.registry = {
+    np = {
+      from = {
+        type = "indirect";
+        id = "np";
+      };
+      flake = nixpkgs;
+    };
+    nixpkgs = {
+      from = {
+        type = "indirect";
+        id = "nixpkgs";
+      };
+      flake = nixpkgs;
+    };
+  };
 }

@@ -13,14 +13,6 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # helix = {
-    #   url = "github:helix-editor/helix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    # hyprland = {
-    #   url = "github:hyprwm/hyprland";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     networkmanager-nixpkgs = {
       url = "github:NixOS/nixpkgs/22.05";
     };
@@ -67,25 +59,15 @@
       ];
     };
   in {
-    homeConfigurations."josh@joshframework" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = attrs;
-      modules = [
-        ./home
-        nix-index-database.hmModules.nix-index
-        { home.stateVersion = "22.11"; }
-      ];
-    };
-
     homeConfigurations."josh" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = attrs;
       modules = [
         ./home
         nix-index-database.hmModules.nix-index
-        { home.username = "josh"; }
-        { home.stateVersion = "24.05"; }
-        { home.homeDirectory = "/var/home/josh"; }
+        {home.username = "josh";}
+        {home.stateVersion = "24.05";}
+        {home.homeDirectory = "/var/home/josh";}
       ];
     };
   };
