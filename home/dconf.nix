@@ -74,7 +74,7 @@ with lib.hm.gvariant; {
       font-name = "JetBrainsMonoNL Nerd Font Propo 10";
       monospace-font-name = "JetBrainsMonoNL Nerd Font Mono 10";
       show-battery-percentage=true;
-      text-scaling-factor=1.5;
+      text-scaling-factor=1.25;
     };
 
     "org/gnome/desktop/notifications" = {
@@ -202,12 +202,6 @@ with lib.hm.gvariant; {
       sort-type = "ascending";
     };
 
-    "org/gnome/file-roller/ui" = {
-      sidebar-width = 200;
-      window-height = 823;
-      window-width = 1570;
-    };
-
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
       edge-tiling = false;
@@ -218,26 +212,6 @@ with lib.hm.gvariant; {
     "org/gnome/mutter/keybindings" = {
       toggle-tiled-left = ["<Super>z"];
       toggle-tiled-right = ["<Super>c"];
-    };
-
-    "org/gnome/mutter/wayland/keybindings" = {
-      restore-shortcuts = [""];
-    };
-
-    "org/gnome/nautilus/preferences" = {
-      default-folder-viewer = "icon-view";
-      migrated-gtk-settings = true;
-      search-filter-time-type = "last_modified";
-      search-view = "list-view";
-    };
-
-    "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [771 814];
-      maximized = true;
-    };
-
-    "org/gnome/nm-applet" = {
-      disable-connected-notifications = true;
     };
 
     "org/gnome/portal/filechooser/org/prismlauncher/PrismLauncher" = {
@@ -251,42 +225,13 @@ with lib.hm.gvariant; {
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super>Return";
-      command = "gnome-terminal";
-      name = "gnome-terminal";
-    };
-
-    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-      binding = "<Shift><Super>c";
-      command = "code --ozone-platform=wayland";
-      name = "code";
+      name = "terminal";
+      command = "alacritty";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "interactive";
       sleep-inactive-ac-type = "nothing";
-    };
-
-    "org/gnome/shell" = {
-      command-history = ["gnome-terminal" "kitty" "files" "thunar" "firefox"];
-      disabled-extensions = ["material-shell@papyelgringo" "unite@hardpixel.eu"];
-      enabled-extensions = [];
-      welcome-dialog-last-shown-version = "42.4";
-    };
-
-    "org/gnome/shell/extensions/materialshell/theme" = {
-      clock-horizontal = true;
-      panel-opacity = 1000;
-      panel-size = 30;
-      taskbar-item-style = "full";
-    };
-
-    "org/gnome/shell/extensions/pop-shell" = {
-      active-hint = false;
-      active-hint-border-radius = mkUint32 5;
-      mouse-cursor-focus-location = mkUint32 4;
-      show-skip-taskbar = false;
-      stacking-with-mouse = false;
-      tile-by-default = true;
     };
 
     "org/gnome/shell/keybindings" = {

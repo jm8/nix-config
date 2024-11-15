@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixGL = {
+      url = "github:nix-community/nixGL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # helix = {
     #   url = "github:helix-editor/helix";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +42,7 @@
     home-manager,
     nix-index-database,
     networkmanager-nixpkgs,
+    nixGL,
     ...
   } @ attrs: let
     system = "x86_64-linux";
@@ -72,17 +77,7 @@
       ];
     };
 
-    homeConfigurations."josh@joshnix" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = attrs;
-      modules = [
-        ./home
-        nix-index-database.hmModules.nix-index
-        { home.stateVersion = "22.11"; }
-      ];
-    };
-
-    homeConfigurations."josh@fedora" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."josh" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = attrs;
       modules = [
@@ -91,24 +86,6 @@
         { home.username = "josh"; }
         { home.stateVersion = "24.05"; }
         { home.homeDirectory = "/var/home/josh"; }
-      ];
-    };
-
-    nixosConfigurations.joshframework = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = attrs;
-      modules = [
-        ./sys/joshframework.nix
-        ./sys/common.nix
-      ];
-    };
-
-    nixosConfigurations.joshnix = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = attrs;
-      modules = [
-        ./sys/joshnix.nix
-        ./sys/common.nix
       ];
     };
   };

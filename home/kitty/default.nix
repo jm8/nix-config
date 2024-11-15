@@ -1,5 +1,6 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
   programs.kitty = {
+    package = config.lib.nixGL.wrap pkgs.kitty;
     enable = true;
     settings = {
       window_padding_width = 4;
