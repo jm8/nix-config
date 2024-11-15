@@ -22,10 +22,10 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/desktop/wm/keybindings" = {
-      close = ["<Super>q"];
+      close = ["<Alt>q"];
       cycle-panels = [];
       cycle-panels-backward = [];
-      maximize = ["<Super>w"];
+      maximize = ["<Alt>w"];
       minimize = [];
       move-to-monitor-down = [];
       move-to-monitor-left = [];
@@ -36,8 +36,8 @@ with lib.hm.gvariant; {
       move-to-workspace-3 = [];
       move-to-workspace-4 = [];
       move-to-workspace-last = [];
-      move-to-workspace-left = ["<Shift><Super>a"];
-      move-to-workspace-right = ["<Shift><Super>d"];
+      move-to-workspace-left = ["<Shift><Alt>a"];
+      move-to-workspace-right = ["<Shift><Alt>d"];
       switch-applications = [];
       switch-applications-backward = [];
       switch-input-source = [];
@@ -45,8 +45,8 @@ with lib.hm.gvariant; {
       switch-panels = [];
       switch-panels-backward = [];
       switch-to-workspace-last = [];
-      switch-to-workspace-left = ["<Super>a"];
-      switch-to-workspace-right = ["<Super>d"];
+      switch-to-workspace-left = ["<Alt>a"];
+      switch-to-workspace-right = ["<Alt>d"];
       switch-windows = ["<Alt>Tab"];
       switch-windows-backward = ["<Shift><Alt>Tab"];
       unmaximize = [];
@@ -67,17 +67,17 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/mutter/keybindings" = {
-      toggle-tiled-left = ["<Super>z"];
-      toggle-tiled-right = ["<Super>c"];
+      toggle-tiled-left = ["<Alt>z"];
+      toggle-tiled-right = ["<Alt>c"];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
-      www = ["<Shift><Super>f"];
+      www = ["<Shift><Alt>f"];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>Return";
+      binding = "<Alt>Return";
       name = "terminal";
       command = "alacritty";
     };
@@ -90,7 +90,7 @@ with lib.hm.gvariant; {
     "org/gnome/shell/keybindings" = {
       screenshot-window = [];
       show-screen-recording-ui = [];
-      show-screenshot-ui = ["<Shift><Super>s"];
+      show-screenshot-ui = ["<Shift><Alt>s"];
       switch-to-application-1 = [""];
       switch-to-application-2 = [""];
       switch-to-application-3 = [""];

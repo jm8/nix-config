@@ -4,6 +4,7 @@
   nix-analyzer,
   nixGL,
   lib,
+  config,
   ...
 }: {
   imports = [
@@ -13,22 +14,10 @@
     ./xdg.nix
     ./dconf.nix
     ./alacritty.nix
+    ./vscode
   ];
 
   home.keyboard = null;
-
-  programs.vscode = {
-    package = pkgs.vscode;
-    extensions = with pkgs.vscode-extensions; [
-      rust-lang.rust-analyzer
-      jnoortheen.nix-ide
-      ms-python.python
-      redhat.java
-      vscjava.vscode-java-debug
-      vscjava.vscode-java-test
-    ];
-    enable = true;
-  };
 
   home.packages = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
