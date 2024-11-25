@@ -1,10 +1,9 @@
 {
   pkgs,
-  nix-vscode-extensions,  
+  nix-vscode-extensions,
   lib,
   ...
-}:
-{
+}: {
   programs.vscode = {
     package = pkgs.vscode;
     extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [

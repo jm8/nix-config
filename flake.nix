@@ -62,15 +62,42 @@
       ];
     };
   in {
-    homeConfigurations."josh" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."josh@stryver" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      extraSpecialArgs = attrs;
+      modules = [
+        ./home
+        ./home/gui.nix
+        nix-index-database.hmModules.nix-index
+        {home.username = "josh";}
+        {home.stateVersion = "24.05";}
+        {home.homeDirectory = "/var/home/josh";}
+      ];
+    };
+
+    homeConfigurations."josh@darnay" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = attrs;
       modules = [
         ./home
         nix-index-database.hmModules.nix-index
         {home.username = "josh";}
-        {home.stateVersion = "24.05";}
-        {home.homeDirectory = "/var/home/josh";}
+        {home.stateVersion = "22.11";}
+        {programs.firefox.enable = true;}
+        {home.homeDirectory = "/home/josh";}
+        {
+          nixGL.packages = nixGL.packages;
+          nixGL.defaultWrapper = "mesa";
+        }
+      ];
+    };
+
+    nixosConfigurations.darnay = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = attrs;
+      modules = [
+        ./sys/darnay.nix
+        ./sys/common.nix
       ];
     };
   };
