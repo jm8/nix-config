@@ -44,6 +44,7 @@
     userName = "Joshua Sims";
     extraConfig = {
       push.autoSetupRemote = true;
+      pull.rebase = true;
     };
   };
 
