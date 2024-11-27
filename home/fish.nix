@@ -6,6 +6,8 @@
   programs.fish = {
     enable = true;
     shellAliases = {
+      "dl" = ''set dl_file (ls -t ~/downloads | head -n 1); mv ~/downloads/$dl_file .; echo "$dl_file"'';
+
       "g" = "git";
       "grt" = ''cd "$(git rev-parse --show-toplevel || echo .)"'';
       "ggpur" = ''ggu'';

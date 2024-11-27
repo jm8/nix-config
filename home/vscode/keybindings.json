@@ -20,94 +20,94 @@
         "command": "dance.selections.expandToLines",
         "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'"
     },
-    {
-        "key": "ctrl+a",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+b",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+m",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+o",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "noop"
-    },
+    // {
+    //     "key": "ctrl+a",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+b",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+c",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+d",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+e",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+f",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+g",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+h",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+i",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+j",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+k",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+l",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+m",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+n",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+o",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+p",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+q",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+r",
+    //     "command": "noop"
+    // },
     // {
     //     "key": "ctrl+s",
     //     "command": "noop"
     // },
-    {
-        "key": "ctrl+t",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+u",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+v",
-        "command": "noop"
-    },
+    // {
+    //     "key": "ctrl+t",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+u",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+v",
+    //     "command": "noop"
+    // },
     // {
     //     "key": "ctrl+w",
     //     "command": "noop"
@@ -116,24 +116,24 @@
         "key": "ctrl+x",
         "command": "noop"
     },
-    {
-        "key": "ctrl+y",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+z",
-        "command": "noop"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "!editorTextFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "!editorTextFocus"
-    },
+    // {
+    //     "key": "ctrl+y",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+z",
+    //     "command": "noop"
+    // },
+    // {
+    //     "key": "ctrl+p",
+    //     "command": "workbench.action.quickOpenSelectPrevious",
+    //     "when": "!editorTextFocus"
+    // },
+    // {
+    //     "key": "ctrl+n",
+    //     "command": "workbench.action.quickOpenSelectNext",
+    //     "when": "!editorTextFocus"
+    // },
     {
         "key": "shift+tab",
         "command": "workbench.action.quickOpenSelectPrevious",
@@ -149,11 +149,11 @@
         "command": "selectPrevCodeAction",
         "when": "codeActionMenuVisible"
     },
-    {
-        "key": "ctrl+n",
-        "command": "selectNextCodeAction",
-        "when": "codeActionMenuVisible"
-    },
+    // {
+    //     "key": "ctrl+n",
+    //     "command": "selectNextCodeAction",
+    //     "when": "codeActionMenuVisible"
+    // },
     {
         "key": "shift+tab",
         "command": "selectPrevCodeAction",
@@ -164,11 +164,11 @@
         "command": "selectNextCodeAction",
         "when": "codeActionMenuVisible"
     },
-    {
-        "key": "escape",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus || panelFocus"
-    },
+    // {
+    //     "key": "escape",
+    //     "command": "workbench.action.focusActiveEditorGroup",
+    //     "when": "sideBarFocus || panelFocus"
+    // },
     {
         "key": "alt+1",
         "command": "workbench.view.explorer"
@@ -210,41 +210,41 @@
         "command": "search.action.focusSearchList",
         "when": "activeViewlet == 'workbench.view.search' && searchInputBoxFocus"
     },
-    {
-        "key": "escape",
-        "command": "workbench.action.closeSidebar",
-        "when": "activeViewlet == 'workbench.view.search' && searchInputBoxFocus"
-    },
-    {
-        "key": "escape",
-        "command": "workbench.action.findInFiles",
-        "when": "activeViewlet == 'workbench.view.search' && searchViewletFocus && !searchInputBoxFocus"
-    },
+    // {
+    //     "key": "escape",
+    //     "command": "workbench.action.closeSidebar",
+    //     "when": "activeViewlet == 'workbench.view.search' && searchInputBoxFocus"
+    // },
+    // {
+    //     "key": "escape",
+    //     "command": "workbench.action.findInFiles",
+    //     "when": "activeViewlet == 'workbench.view.search' && searchViewletFocus && !searchInputBoxFocus"
+    // },
     {
         "key": "enter",
         "command": "search.action.focusNextSearchResult",
         "when": "inSearchEditor && searchInputBoxFocus"
     },
-    {
-        "key": "escape",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "inSearchEditor && searchInputBoxFocus"
-    },
-    {
-        "key": "escape",
-        "command": "search.action.openEditor",
-        "when": "inSearchEditor && !searchInputBoxFocus"
-    },
+    // {
+    //     "key": "escape",
+    //     "command": "workbench.action.closeActiveEditor",
+    //     "when": "inSearchEditor && searchInputBoxFocus"
+    // },
+    // {
+    //     "key": "escape",
+    //     "command": "search.action.openEditor",
+    //     "when": "inSearchEditor && !searchInputBoxFocus"
+    // },
     {
         "key": "enter",
         "command": "renameFile",
         "when": "filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly"
     },
-    {
-        "key": "escape",
-        "command": "cancelRenameInput",
-        "when": "filesExplorerFocus && !listFocus"
-    },
+    // {
+    //     "key": "escape",
+    //     "command": "cancelRenameInput",
+    //     "when": "filesExplorerFocus && !listFocus"
+    // },
     {
         "key": "alt+backspace",
         "command": "moveFileToTrash",
@@ -879,11 +879,11 @@
         "command": "dance.history.repeat.edit",
         "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'"
     },
-    {
-        "key": "escape",
-        "command": "dance.modes.set.normal",
-        "when": "editorTextFocus && dance.mode != 'normal'"
-    },
+    // {
+    //     "key": "escape",
+    //     "command": "dance.modes.set.normal",
+    //     "when": "editorTextFocus && dance.mode != 'normal'"
+    // },
     {
         "key": "ctrl+b",
         "command": "dance.select.vertically",
@@ -894,16 +894,16 @@
         },
         "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'"
     },
-    {
-        "key": "ctrl+f",
-        "command": "dance.select.vertically",
-        "args": {
-            "direction": 1,
-            "by": "page",
-            "shift": "jump"
-        },
-        "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'"
-    },
+    // {
+    //     "key": "ctrl+f",
+    //     "command": "dance.select.vertically",
+    //     "args": {
+    //         "direction": 1,
+    //         "by": "page",
+    //         "shift": "jump"
+    //     },
+    //     "when": "editorTextFocus && dance.mode == 'normal' || editorTextFocus && dance.mode == 'select'"
+    // },
     {
         "key": "ctrl+u",
         "command": "dance.select.vertically",
@@ -1235,16 +1235,16 @@
         },
         "when": "editorTextFocus && dance.mode == 'select'"
     },
-    {
-        "key": "ctrl+f",
-        "command": "dance.select.vertically",
-        "args": {
-            "shift": "extend",
-            "direction": 1,
-            "by": "page"
-        },
-        "when": "editorTextFocus && dance.mode == 'select'"
-    },
+    // {
+    //     "key": "ctrl+f",
+    //     "command": "dance.select.vertically",
+    //     "args": {
+    //         "shift": "extend",
+    //         "direction": 1,
+    //         "by": "page"
+    //     },
+    //     "when": "editorTextFocus && dance.mode == 'select'"
+    // },
     {
         "key": "ctrl+u",
         "command": "dance.select.vertically",
@@ -1491,16 +1491,16 @@
         "command": "dance.edit.selectRegister-insert",
         "when": "editorTextFocus && dance.mode == 'insert'"
     },
-    {
-        "key": "ctrl+s",
-        "command": "???",
-        "when": "editorTextFocus && dance.mode == 'insert'"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "deleteWordLeft",
-        "when": "editorTextFocus && dance.mode == 'insert'"
-    },
+    // {
+    //     "key": "ctrl+s",
+    //     "command": "???",
+    //     "when": "editorTextFocus && dance.mode == 'insert'"
+    // },
+    // {
+    //     "key": "ctrl+w",
+    //     "command": "deleteWordLeft",
+    //     "when": "editorTextFocus && dance.mode == 'insert'"
+    // },
     {
         "key": "alt+d",
         "command": "deleteWordRight",
@@ -1529,6 +1529,16 @@
     {
         "key": "ctrl+j",
         "command": "dance.edit.newLine.below.insert",
+        "when": "editorTextFocus && dance.mode == 'insert'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-dance.select.vertically",
+        "when": "editorTextFocus && dance.mode == 'normal'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-dance.select.vertically",
         "when": "editorTextFocus && dance.mode == 'insert'"
     },
     /*

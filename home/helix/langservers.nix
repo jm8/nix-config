@@ -36,6 +36,8 @@
       # taplo
       zig
       zls
+      omnisharp-roslyn
+      dotnet-sdk
     ]
     ++ [
       # nix-analyzer.packages.x86_64-linux.default

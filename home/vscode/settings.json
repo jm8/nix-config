@@ -4,7 +4,6 @@
   "workbench.sideBar.location": "right",
   "terminal.integrated.defaultProfile.linux": "fish",
   "keyboard.dispatch": "keyCode",
-  "editor.formatOnSave": true,
   "dance.modes": {
     "normal": {
       "lineNumbers": "inherit",
@@ -910,4 +909,21 @@
       },
     },
   },
+  "files.exclude": {
+    "**/.direnv": true
+  },
+  "zig.initialSetupDone": true,
+  "editor.formatOnSave": true,
+  "[nix]": {
+    "editor.formatOnSave": false
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+  },
+  "[meson]": {
+    "editor.formatOnSave": false
+  },
+  "mesonbuild.downloadLanguageServer": true,
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "/var/home/josh/src/nix-analyzer-new/target/debug/nix-analyzer-new",
 }
