@@ -16,6 +16,7 @@
     bat
     bear
     binutils
+    borgbackup
     bun
     cachix
     canvas-cli.packages.x86_64-linux.default
