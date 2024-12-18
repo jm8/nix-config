@@ -7,11 +7,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1705690996,
-        "narHash": "sha256-Wkivf8Qni7k2cOoVu20cebQBjgbbzIiOS1ebunMqOt4=",
+        "lastModified": 1734387479,
+        "narHash": "sha256-nglJYAP1zlIQ4CaSYvJ07Ou4voJ6nKnKY7D0hWBT/A8=",
         "owner": "mbund",
         "repo": "canvas-cli",
-        "rev": "ae719643588bc0312d8058c46988540b23da14a3",
+        "rev": "7b23819379eb669cc7c7c877c17d338c8f7ffb43",
         "type": "github"
       },
       "original": {

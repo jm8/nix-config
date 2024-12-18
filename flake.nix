@@ -74,6 +74,8 @@
         {home.homeDirectory = "/var/home/josh";}
         {
           nixGL.packages = nixGL.packages;
+          nixGL.vulkan.enable = true;
+          nixGL.defaultWrapper = "mesa";
         }
       ];
     };
@@ -88,10 +90,6 @@
         {home.stateVersion = "22.11";}
         {programs.firefox.enable = true;}
         {home.homeDirectory = "/home/josh";}
-        {
-          nixGL.packages = nixGL.packages;
-          nixGL.defaultWrapper = "mesa";
-        }
       ];
     };
 
