@@ -27,5 +27,9 @@
   "rust-analyzer.cargo.buildScripts.enable": true,
   "workbench.sideBar.location": "right",
   "window.customTitleBarVisibility": "auto",
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "files.trimTrailingWhitespace": true
 }

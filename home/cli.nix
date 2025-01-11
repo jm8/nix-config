@@ -27,6 +27,7 @@
     file
     flyctl
     gdb
+    pwndbg
     ghidra
     jq
     just
