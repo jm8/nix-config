@@ -87,4 +87,8 @@
       flake = nixpkgs;
     };
   };
+
+  nixGL.packages = nixGL.packages;
+  nixGL.vulkan.enable = true;
+  nixGL.defaultWrapper = "mesa";
 }

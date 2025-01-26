@@ -72,11 +72,6 @@
         {home.username = "josh";}
         {home.stateVersion = "24.05";}
         {home.homeDirectory = "/var/home/josh";}
-        {
-          nixGL.packages = nixGL.packages;
-          nixGL.vulkan.enable = true;
-          nixGL.defaultWrapper = "mesa";
-        }
       ];
     };
 
