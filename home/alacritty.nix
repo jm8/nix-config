@@ -90,7 +90,8 @@
           }
         ];
       };
-      terminal.shell = "fish";
+      terminal.shell.program = "fish";
+      terminal.shell.args = ["-l" "-c" "zellij"];
     };
   };
 }

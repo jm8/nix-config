@@ -6,7 +6,6 @@
   "files.exclude": {
     "**/.direnv": true
   },
-  "zig.initialSetupDone": true,
   "[nix]": {
     "editor.formatOnSave": false
   },
@@ -31,5 +30,7 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "rust-analyzer.runnables.askBeforeUpdateTest": false,
+  "zig.zls.enabled": "on"
 }

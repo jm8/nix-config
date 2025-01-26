@@ -26,7 +26,9 @@
     ffmpeg
     file
     flyctl
+    go-task
     gdb
+    patchelf
     pwndbg
     ghidra
     jq
@@ -56,6 +58,10 @@
     zathura
     zellij
     zip
+
+    cmake
+    gnumake
+    gcc
   ];
 
   programs.zsh = {
