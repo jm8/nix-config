@@ -7,7 +7,15 @@
     enable = true;
     shellAliases = {
       "dl" = ''set dl_file (ls -t ~/downloads | head -n 1); mv ~/downloads/$dl_file .; echo "$dl_file"'';
-
+      "backup" = ''
+        borg create --stats --one-file-system --compression lz4 --checkpoint-interval 86400 --progress \
+          darnay:~/borgbackup::$(hostname)-$(date --iso-8601=minutes) \
+          ~/data ~/src ~/downloads \
+          --exclude '*/target/' \
+          --exclude '*/node_modules/' \
+          --exclude '*/.zig-cache' \
+          --exclude '*.o'
+      '';
       "g" = "git";
       "grt" = ''cd "$(git rev-parse --show-toplevel || echo .)"'';
       "ggpur" = ''ggu'';
