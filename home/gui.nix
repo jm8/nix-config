@@ -33,5 +33,7 @@
     lapce
     obs-studio
     vlc
+
+    
   ];
 }

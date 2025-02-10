@@ -9,6 +9,7 @@
       with ps; [
         requests
         pwntools
+        pycryptodome
       ]);
     nixGL = config.nixGL.packages.x86_64-linux.nixGLIntel;
   in [
@@ -16,9 +17,11 @@
     bat
     bear
     binutils
+    binwalk
     bun
     cachix
     canvas-cli.packages.x86_64-linux.default
+    cmake
     comma
     dconf2nix
     deno
@@ -26,11 +29,11 @@
     ffmpeg
     file
     flyctl
-    go-task
+    gcc
     gdb
-    patchelf
-    pwndbg
     ghidra
+    gnumake
+    go-task
     jq
     just
     neofetch
@@ -41,10 +44,12 @@
     octave
     onlyoffice-bin
     pandoc
+    patchelf
     pdftk
     pwndbg
     pythonWithPackages
     ripgrep
+    ssm-session-manager-plugin
     strace
     texlive.combined.scheme-full
     typst
@@ -54,14 +59,11 @@
     wget
     wireshark
     wl-clipboard
+    xxd
     yt-dlp
     zathura
     zellij
     zip
-
-    cmake
-    gnumake
-    gcc
   ];
 
   programs.zsh = {
