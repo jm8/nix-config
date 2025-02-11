@@ -15,9 +15,9 @@ with lib.hm.gvariant; {
       font-antialiasing = "grayscale";
       font-hinting = "slight";
       toolbar-style = "text";
-      document-font-name = "JetBrainsMonoNL Nerd Font Propo 11";
-      font-name = "JetBrainsMonoNL Nerd Font Propo 11";
-      monospace-font-name = "JetBrainsMonoNL Nerd Font Mono 11";
+      # document-font-name = "JetBrainsMonoNL Nerd Font Propo 11";
+      # font-name = "JetBrainsMonoNL Nerd Font Propo 11";
+      # monospace-font-name = "JetBrainsMonoNL Nerd Font Mono 11";
       show-battery-percentage = true;
     };
 
