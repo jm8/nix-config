@@ -17,7 +17,7 @@
     bat
     bear
     binutils
-    # binwalk
+    binwalk
     bun
     cachix
     canvas-cli.packages.x86_64-linux.default
@@ -53,7 +53,7 @@
     strace
     texlive.combined.scheme-full
     typst
-    tinymist
+    typst-lsp
     unzip
     uv
     wget

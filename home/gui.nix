@@ -12,7 +12,7 @@
 
   home.packages = with pkgs; [
     # fonts
-    nerd-fonts.jetbrains-mono
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
     libre-baskerville
     open-sans
 
@@ -21,7 +21,7 @@
     # (config.lib.nixGL.wrap prismlauncher)
     audacity
     beekeeper-studio
-    # blender
+    blender
     calibre
     chromium
     gimp
