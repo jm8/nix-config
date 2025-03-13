@@ -91,4 +91,29 @@
   nixGL.packages = nixGL.packages;
   nixGL.vulkan.enable = true;
   nixGL.defaultWrapper = "mesa";
+
+  programs.ssh.extraConfig = ''
+    Host darnay
+    	Hostname darnay
+    	RemoteCommand fish
+    	RequestTty force
+    Host stryver
+    	Hostname stryver
+    	RemoteCommand fish
+    	RequestTty force
+  '';
+
+  home.sessionVariables = {
+    # To install REAPER with SPITFIRE AUDIO
+    # 1. install bottle in flatpak
+    # 2. Make new bottle with data in /home/josh/data/music/bottle/spitfire
+    # 3. Donwload SpitfireAudio-Win-3.4.13.exe and run it in the bottle.
+    # 4. This installs Spitfire Audio, in which you now install login and download the plugin
+    # 5. Download the release of yabridge
+    # 6. ./yabridgectl add /home/josh/data/music/bottle/spitfire/drive_c/Program\ Files/Common\ Files/VST3/
+    #    ./yabridgectl status
+    #    ./yabridgectl sync
+    WINEPREFIX = "/home/josh/data/music/bottle/spitfire";
+    WINELOADER = "/home/josh/.var/app/com.usebottles.bottles/data/bottles/runners/soda-9.0-1/bin/wine";
+  };
 }

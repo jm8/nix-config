@@ -185,6 +185,7 @@
       "gwtmv" = ''git worktree move'';
       "gwtrm" = ''git worktree remove'';
       "gstu" = ''gsta --include-untracked'';
+      "sudo" = ''sudo --preserve-env=PATH env'';
     };
     plugins = [
       {
@@ -195,7 +196,7 @@
   };
 
   programs.zoxide = {
-    enable = true;
+        enable = true;
     enableFishIntegration = true;
   };
 

@@ -7,7 +7,8 @@
     "**/.direnv": true
   },
   "[nix]": {
-    "editor.formatOnSave": false
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
   },
   "[csharp]": {
     "editor.defaultFormatter": "csharpier.csharpier-vscode"
@@ -32,5 +33,15 @@
   },
   "files.trimTrailingWhitespace": true,
   "rust-analyzer.runnables.askBeforeUpdateTest": false,
-  "zig.zls.enabled": "on"
+  "zig.zls.enabled": "on",
+  "workbench.editor.empty.hint": "hidden",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }

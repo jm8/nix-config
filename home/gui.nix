@@ -33,7 +33,7 @@
     lapce
     obs-studio
     vlc
-
+    reaper
     
   ];
 }

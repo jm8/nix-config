@@ -33,12 +33,15 @@
     gdb
     ghidra
     gnumake
+    go
     go-task
     jq
     just
+    nasm
     neofetch
     netcat-openbsd
     nixGL
+    nmap
     nodePackages.pnpm
     nodejs
     octave
@@ -49,6 +52,7 @@
     pwndbg
     pythonWithPackages
     ripgrep
+    rustscan
     ssm-session-manager-plugin
     strace
     texlive.combined.scheme-full
@@ -64,6 +68,7 @@
     zathura
     zellij
     zip
+    metasploit
   ];
 
   programs.zsh = {

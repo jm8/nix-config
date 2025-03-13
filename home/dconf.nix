@@ -4,7 +4,7 @@ with lib.hm.gvariant; {
   dconf.settings = {
     "org/gnome/desktop/input-sources" = {
       sources = [(mkTuple ["xkb" "us"]) (mkTuple ["xkb" "gr+polytonic"])];
-      xkb-options = ["caps:escape"];
+      xkb-options = ["caps:escape" "lv3:menu_switch" "compose:ralt"];
     };
 
     "org/gnome/desktop/interface" = {

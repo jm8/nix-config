@@ -50,6 +50,7 @@
           "code"
           "vscode"
           "terraform"
+          "reaper"
         ];
       overlays = [
         (
