@@ -34,6 +34,6 @@
     obs-studio
     vlc
     reaper
-    
+    onboard    
   ];
 }

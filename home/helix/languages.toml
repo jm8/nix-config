@@ -12,7 +12,7 @@ formatter = {command = 'black', args = ["--quiet", "-"]}
 [language-server.nix-analyzer]
 # command = "/home/josh/dev/nix-analyzer/outputs/out/bin/nix-analyzer"
 # command = "/home/josh/dev/nix-analyzer-cpnp/nix-analyzer/target/debug/lsp"
-command = "/home/josh/src/nix-analyzer-new/target/debug/nix-analyzer-new"
+command = "/home/josh/src/nix-analyzer/target/debug/nix-analyzer"
 
 [language-server.pyright]
 command = "pyright-langserver"

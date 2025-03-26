@@ -18,7 +18,7 @@
   },
   "mesonbuild.downloadLanguageServer": true,
   "nix.enableLanguageServer": true,
-  "nix.serverPath": "/var/home/josh/src/nix-analyzer-new/target/debug/nix-analyzer-new",
+  "nix.serverPath": "/var/home/josh/src/nix-analyzer/target/debug/nix-analyzer",
   "godotTools.editorPath.godot4": "/nix/store/hgq3z4f7qzbavgbh0zybmi062prq9ixy-godot4/bin/godot4",
   "editor.formatOnSave": true,
   "[typescript]": {
