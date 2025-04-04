@@ -49,7 +49,6 @@
     pandoc
     patchelf
     pdftk
-    pwndbg
     pythonWithPackages
     ripgrep
     rustscan
@@ -57,7 +56,7 @@
     strace
     texlive.combined.scheme-full
     typst
-    typst-lsp
+    tinymist
     unzip
     uv
     wget
