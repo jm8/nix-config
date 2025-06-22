@@ -43,5 +43,60 @@
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+  "vim.handleKeys": {
+    "<C-d>": false,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-p>": false,
+    "<C-w>": false,
+  },
+  "editor.lineNumbers": "relative",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "U"
+      ],
+      "commands": [],
+    }
+  ],
+  "python.analysis.typeCheckingMode": "strict",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "[awk]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "ARGNO",
+    "codegen",
+    "funct",
+    "getline",
+    "globl",
+    "gsub",
+    "riscv",
+    "RLENGTH",
+    "seqz",
+    "sprintf",
+    "SUBSEP"
+  ],
 }

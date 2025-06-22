@@ -16,18 +16,19 @@
 
   swapDevices = [];
 
-  # environment.variables = {
-  #   CLUTTER_BACKEND = "wayland";
-  #   GBM_BACKEND = "nvidia-drm";
-  #   LIBVA_DRIVER_NAME = "nvidia";
-  #   XDG_SESSION_TYPE = "wayland";
-  #   MOZ_ENABLE_WAYLAND = "1";
-  #   __GLX_VENDOR_LIBRARY = "nvidia";
-  #   WLR_NO_HARDWARE_CURSORS = "1";
-  #   WLR_BACKEND = "vulkan";
-  #   QT_QPA_PLATFORM = "wayland";
-  #   GDK_BACKEND = "wayland";
-  # };
+  environment.variables = {
+    QTWEBENGINE_CHROMIUM_FLAGS = "--disable-gpu";
+    #   CLUTTER_BACKEND = "wayland";
+    #   GBM_BACKEND = "nvidia-drm";
+    #   LIBVA_DRIVER_NAME = "nvidia";
+    #   XDG_SESSION_TYPE = "wayland";
+    #   MOZ_ENABLE_WAYLAND = "1";
+    #   __GLX_VENDOR_LIBRARY = "nvidia";
+    #   WLR_NO_HARDWARE_CURSORS = "1";
+    #   WLR_BACKEND = "vulkan";
+    #   QT_QPA_PLATFORM = "wayland";
+    #   GDK_BACKEND = "wayland";
+  };
 
   boot.blacklistedKernelModules = ["nouveau"];
 
@@ -56,6 +57,9 @@
       nvidia-vaapi-driver
     ];
   };
+
+  aaaaaaaaa = 2;
+
   hardware.nvidia.open = false;
 
   systemd.enableEmergencyMode = false;

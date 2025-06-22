@@ -25,7 +25,7 @@
     blender
     calibre
     chromium
-    gimp
+    gimp3
     gnome-boxes
     gnome-shell-extensions
     gnome-tweaks
@@ -36,5 +36,6 @@
     vlc
     reaper
     onboard
+    krita
   ];
 }
