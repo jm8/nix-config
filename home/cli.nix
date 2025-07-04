@@ -54,8 +54,10 @@
     rustscan
     ssm-session-manager-plugin
     strace
-    texlive.combined.scheme-full
+    # texlive.combined.scheme-full
     typst
+    typstyle
+    tmux
     tinymist
     unzip
     uv

@@ -61,6 +61,7 @@
       default_shell = "fish";
       pane_frames = false;
       show_startup_tips = false;
+      on_force_close = "quit";
     };
   };
 

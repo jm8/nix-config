@@ -29,6 +29,7 @@
       nodePackages.yaml-language-server
       # ocamlPackages.ocaml-lsp
       pyright
+      ruff
       # rubyPackages.solargraph
       rust-analyzer
       rustfmt
