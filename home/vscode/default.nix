@@ -6,7 +6,7 @@
 }: {
   programs.vscode = {
     package = pkgs.vscode;
-    extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
+    profiles.default.extensions = with nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace; [
       rust-lang.rust-analyzer
       jnoortheen.nix-ide
       ms-python.python

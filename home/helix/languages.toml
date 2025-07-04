@@ -1,6 +1,7 @@
 [[language]]
 name = "nix"
 language-servers = ["nix-analyzer"]
+auto-format = true
 
 [language-server.nix-analyzer]
 command = "/home/josh/src/nix-analyzer/target/debug/nix-analyzer"

@@ -14,6 +14,7 @@
     ./xdg.nix
     ./dconf.nix
     ./fish.nix
+    ./autoupdate.nix
   ];
 
   home.keyboard = null;
