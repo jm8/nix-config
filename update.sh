@@ -1,3 +1,4 @@
+#!/bin/sh
 cd ~/nix-config || exit 1
 if [ -n "$(git status --porcelain)" ]; then
   git add -A && git commit -m "temp"
