@@ -23,3 +23,17 @@ args = ["lsp"]
 
 [language-server.texlab.build]
 onSave = true
+
+[language-server.awk-language-server]
+command = "/var/home/josh/src/awk-language-server/server/out/cli.js"
+
+[[language]]
+name = "awk"
+scope = "source.awk"
+injection-regex = "awk"
+file-types = ["awk", "gawk", "nawk", "mawk"]
+comment-token = "#"
+language-servers = [ "awk-language-server" ]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+formatter = { command = "/var/home/josh/src/cc.awk/node_modules/prettier/bin-prettier.js", args = ["--parser=awk-parse"]}
