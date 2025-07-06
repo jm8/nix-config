@@ -111,8 +111,13 @@
   programs.adb.enable = true;
 
   services.xserver.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+
+  # systemd.targets.sleep.enable = false;
+  # systemd.targets.suspend.enable = false;
+  # systemd.targets.hibernate.enable = false;
+  # systemd.targets.hybrid-sleep.enable = false;
 
   programs.dconf.enable = true;
   services.dbus.enable = true;
@@ -130,4 +135,9 @@
       PermitRootLogin = "no";
     };
   };
+
+  # networking.firewall.allowedTCPPorts = [ 1024 ];
+  networking.firewall.enable = false;
+
+  # services.flatpak.enable = true;
 }

@@ -82,6 +82,7 @@
         ./home
         nix-index-database.hmModules.nix-index
         {home.username = "josh";}
+        {home.packages = with pkgs; [borgbackup];}
         {home.stateVersion = "22.11";}
         {programs.firefox.enable = true;}
         {home.homeDirectory = "/home/josh";}

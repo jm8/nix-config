@@ -33,5 +33,6 @@
     lapce
     obs-studio
     vlc
+    steam
   ];
 }
