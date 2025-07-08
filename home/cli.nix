@@ -70,6 +70,7 @@
     zellij
     zip
     metasploit
+    rlwrap
   ];
 
   programs.zsh = {
