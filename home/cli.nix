@@ -25,10 +25,12 @@
     comma
     dconf2nix
     deno
+    duckdb
     eza
     ffmpeg
     file
     flyctl
+    fzf
     gcc
     gdb
     ghidra
@@ -37,6 +39,7 @@
     go-task
     jq
     just
+    metasploit
     nasm
     neofetch
     netcat-openbsd
@@ -51,14 +54,14 @@
     pdftk
     pythonWithPackages
     ripgrep
+    rlwrap
     rustscan
     ssm-session-manager-plugin
     strace
-    # texlive.combined.scheme-full
+    tinymist
+    tmux
     typst
     typstyle
-    tmux
-    tinymist
     unzip
     uv
     wget
@@ -69,8 +72,6 @@
     zathura
     zellij
     zip
-    metasploit
-    rlwrap
   ];
 
   programs.zsh = {
