@@ -72,6 +72,7 @@
     zathura
     zellij
     zip
+    texlive.combined.scheme-full
   ];
 
   programs.zsh = {

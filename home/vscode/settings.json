@@ -49,35 +49,23 @@
     "<C-s>": false,
     "<C-z>": false,
     "<C-p>": false,
-    "<C-w>": false,
+    "<C-w>": false
   },
   "editor.lineNumbers": "relative",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.nextInFiles"
-      ],
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.nextInFiles"],
       "silent": true
     },
     {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prevInFiles"
-      ],
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prevInFiles"],
       "silent": true
     },
     {
-      "before": [
-        "U"
-      ],
-      "commands": [],
+      "before": ["U"],
+      "commands": []
     }
   ],
   "python.analysis.typeCheckingMode": "strict",
@@ -100,4 +88,13 @@
     "SUBSEP"
   ],
   "security.workspace.trust.untrustedFiles": "open",
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/tmp/postman-collections-post-response.instructions.md": true,
+    "/tmp/postman-collections-pre-request.instructions.md": true,
+    "/tmp/postman-folder-post-response.instructions.md": true,
+    "/tmp/postman-folder-pre-request.instructions.md": true,
+    "/tmp/postman-http-request-post-response.instructions.md": true,
+    "/tmp/postman-http-request-pre-request.instructions.md": true
+  }
 }
