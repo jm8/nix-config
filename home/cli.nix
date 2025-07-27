@@ -10,6 +10,8 @@
         requests
         pwntools
         pycryptodome
+        tqdm
+        sympy
       ]);
     nixGL = config.nixGL.packages.x86_64-linux.nixGLIntel;
   in [
@@ -32,6 +34,7 @@
     flyctl
     fzf
     gcc
+    musl.dev
     gdb
     ghidra
     gnumake
