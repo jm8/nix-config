@@ -44,6 +44,7 @@
     just
     metasploit
     nasm
+    ncdu
     neofetch
     netcat-openbsd
     nixGL
