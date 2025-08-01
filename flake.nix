@@ -13,9 +13,6 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    networkmanager-nixpkgs = {
-      url = "github:NixOS/nixpkgs/22.05";
-    };
     nix-analyzer = {
       url = "github:jm8/nix-analyzer";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,8 +33,6 @@
     nixpkgs,
     home-manager,
     nix-index-database,
-    networkmanager-nixpkgs,
-    nixGL,
     ...
   } @ attrs: let
     system = "x86_64-linux";
@@ -52,14 +47,6 @@
           "terraform"
           "reaper"
         ];
-      overlays = [
-        (
-          final: prev: let
-            nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
-          in {
-            inherit (nmpkgs) wpa_supplicant;
-          }
-        )
       ];
     };
   in {

@@ -27,4 +27,24 @@
         "command": "editor.action.triggerSuggest",
         "when": "!suggestWidgetVisible && editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     },
+    {
+        "key": "alt+o",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "-editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+i",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "-editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
 ]
