@@ -37,5 +37,6 @@
     reaper
     onboard
     krita
+    runelite
   ];
 }

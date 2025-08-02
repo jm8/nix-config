@@ -47,7 +47,6 @@
           "terraform"
           "reaper"
         ];
-      ];
     };
   in {
     homeConfigurations."josh@stryver" = home-manager.lib.homeManagerConfiguration {

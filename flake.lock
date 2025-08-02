@@ -235,22 +235,6 @@
         "type": "github"
       }
     },
-    "networkmanager-nixpkgs": {
-      "locked": {
-        "lastModified": 1653936696,
-        "narHash": "sha256-M6bJShji9AIDZ7Kh7CPwPBPb/T7RiVev2PAcOi4fxDQ=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "ce6aa13369b667ac2542593170993504932eb836",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "22.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nix-analyzer": {
       "inputs": {
         "crane": "crane",
@@ -506,7 +490,6 @@
       "inputs": {
         "canvas-cli": "canvas-cli",
         "home-manager": "home-manager",
-        "networkmanager-nixpkgs": "networkmanager-nixpkgs",
         "nix-analyzer": "nix-analyzer",
         "nix-index-database": "nix-index-database",
         "nix-vscode-extensions": "nix-vscode-extensions",

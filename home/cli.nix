@@ -32,7 +32,6 @@
     ffmpeg
     file
     flyctl
-    fzf
     gcc
     musl.dev
     gdb
