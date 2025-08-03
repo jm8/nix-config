@@ -54,18 +54,6 @@
     gitCredentialHelper.enable = true;
   };
 
-  programs.zellij = {
-    enable = true;
-    settings = {
-      theme = "catppuccin-mocha";
-      default_layout = "compact";
-      default_shell = "fish";
-      pane_frames = false;
-      show_startup_tips = false;
-      on_force_close = "quit";
-    };
-  };
-
   programs.nix-index.enable = true;
 
   programs.home-manager.enable = true;

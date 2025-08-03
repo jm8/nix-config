@@ -75,8 +75,13 @@
     zathura
     zellij
     zip
+    zellij
     texlive.combined.scheme-full
   ];
+
+  xdg.configFile."zellij/config.kdl" = {
+    source = ./zellij/config.kdl;
+  };
 
   programs.zsh = {
     enable = true;
