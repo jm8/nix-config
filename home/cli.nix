@@ -35,7 +35,6 @@
     gcc
     musl.dev
     gdb
-    ghidra
     gnumake
     go
     go-task
