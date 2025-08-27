@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./alacritty.nix
+    ./kitty.nix
     ./vscode
   ];
 

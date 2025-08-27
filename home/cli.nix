@@ -72,7 +72,6 @@
     xxd
     yt-dlp
     zathura
-    zellij
     zip
     zellij
     texlive.combined.scheme-full
