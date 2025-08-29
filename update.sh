@@ -6,7 +6,11 @@ if [ -n "$(git status --porcelain)" ]; then
   git push
 fi
 nix flake update
-home-manager switch --flake ~/nix-config || exit 1
-git add -A && git commit -m "update"
-git pull --ff-only || exit 1
-git push
+if home-manager switch --flake ~/nix-config; then
+  git add -A && git commit -m "update"
+  git pull --ff-only || exit 1
+  git push
+else
+  git stash
+  home-manager switch --flake ~/nix-config 
+fi

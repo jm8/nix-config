@@ -75,6 +75,8 @@
     zip
     zellij
     texlive.combined.scheme-full
+    rr
+    serpl
   ];
 
   xdg.configFile."zellij/config.kdl" = {
