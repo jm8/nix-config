@@ -22,13 +22,13 @@
       allow_remote_control yes
     '';
 
-    keybindings = {
-      "alt+n" = "new_window_with_cwd";
-      "alt+h" = "neighboring_window left";
-      "alt+l" = "neighboring_window right";
-      "alt+j" = "neighboring_window down";
-      "alt+k" = "neighboring_window up";
-      "ctrl+f" = "toggle_layout stack";
-    };
+    # keybindings = {
+    #   "alt+n" = "new_window_with_cwd";
+    #   "alt+h" = "neighboring_window left";
+    #   "alt+l" = "neighboring_window right";
+    #   "alt+j" = "neighboring_window down";
+    #   "alt+k" = "neighboring_window up";
+    #   "ctrl+f" = "toggle_layout stack";
+    # };
   };
 }

@@ -73,11 +73,15 @@
     yt-dlp
     zathura
     zip
-    zellij
     texlive.combined.scheme-full
     rr
     serpl
   ];
+
+  programs.zellij = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 
   xdg.configFile."zellij/config.kdl" = {
     source = ./zellij/config.kdl;
