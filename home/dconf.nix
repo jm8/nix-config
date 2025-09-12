@@ -79,7 +79,7 @@ with lib.hm.gvariant; {
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Alt>Return";
       name = "terminal";
-      command = "kitty";
+      command = "alacritty";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
