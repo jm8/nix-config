@@ -76,6 +76,8 @@
     texlive.combined.scheme-full
     rr
     serpl
+    kubectl
+    kubelogin-oidc
   ];
 
   programs.zellij = {
