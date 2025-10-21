@@ -78,6 +78,7 @@
     serpl
     kubectl
     kubelogin-oidc
+    sqlite
   ];
 
   programs.zellij = {
