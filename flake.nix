@@ -46,6 +46,7 @@
           "vscode"
           "terraform"
           "reaper"
+          "clonehero"
         ];
     };
   in {

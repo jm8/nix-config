@@ -38,5 +38,6 @@
     onboard
     krita
     runelite
+    clonehero
   ];
 }
