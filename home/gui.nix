@@ -34,6 +34,7 @@
     lapce
     obs-studio
     vlc
+    mkv
     reaper
     onboard
     krita
