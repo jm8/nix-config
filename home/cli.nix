@@ -79,6 +79,7 @@
     kubectl
     kubelogin-oidc
     sqlite
+    sl
   ];
 
   programs.zellij = {

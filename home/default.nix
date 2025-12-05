@@ -40,6 +40,7 @@
     enable = true;
     ignores = [
       ".direnv"
+      ".envrc"
     ];
     userEmail = "jm8hjkl@gmail.com";
     userName = "Joshua Sims";
