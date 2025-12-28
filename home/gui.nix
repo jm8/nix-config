@@ -35,6 +35,7 @@
     obs-studio
     vlc
     mpv
+    aria2
     reaper
     onboard
     krita
