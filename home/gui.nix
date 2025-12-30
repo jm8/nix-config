@@ -23,7 +23,7 @@
     audacity
     # beekeeper-studio
     blender
-    calibre
+    (config.lib.nixGL.wrap calibre)
     chromium
     gimp3
     gnome-boxes
