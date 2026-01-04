@@ -35,6 +35,7 @@
     obs-studio
     vlc
     mpv
+    kodi
     aria2
     reaper
     onboard
