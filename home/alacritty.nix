@@ -7,6 +7,11 @@
     enable = true;
     package = config.lib.nixGL.wrap pkgs.alacritty;
     settings = {
+      font = {
+        size = 12;
+        normal.family = "JetBrains Mono NL Nerd Font";
+      };
+      
       colors = {
         primary = {
           background = "#24273a";
