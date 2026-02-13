@@ -9,7 +9,7 @@
     package = config.lib.nixGL.wrap pkgs.kitty;
 
     font = {
-      name = "JetBrainsMono Nerd Font Mono";
+      name = "Iosevka Nerd Font";
       size = 12;
     };
 

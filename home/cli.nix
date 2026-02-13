@@ -52,7 +52,7 @@
     nodePackages.pnpm
     nodejs
     octave
-    onlyoffice-bin
+    onlyoffice-desktopeditors
     pandoc
     patchelf
     pdftk

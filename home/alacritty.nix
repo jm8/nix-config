@@ -9,7 +9,7 @@
     settings = {
       font = {
         size = 12;
-        normal.family = "JetBrains Mono NL Nerd Font";
+        normal.family = "Iosevka Nerd Font Mono";
       };
       
       colors = {

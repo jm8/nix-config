@@ -13,7 +13,7 @@
   home.packages = with pkgs; [
     # fonts
     fontconfig
-    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
     libre-baskerville
     open-sans
 
