@@ -39,7 +39,7 @@
     aria2
     reaper
     onboard
-    krita
+    # krita
     runelite
     clonehero
   ];

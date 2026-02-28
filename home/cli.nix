@@ -82,6 +82,7 @@
     kubelogin-oidc
     sqlite
     sl
+    lazygit
   ];
 
   programs.zellij = {
