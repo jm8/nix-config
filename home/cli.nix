@@ -15,6 +15,7 @@
       ]);
     nixGL = config.nixGL.packages.x86_64-linux.nixGLIntel;
   in [
+    ranger
     awscli2
     bat
     bear
