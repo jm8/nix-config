@@ -42,5 +42,6 @@
     # krita
     runelite
     clonehero
+    zed-editor
   ];
 }

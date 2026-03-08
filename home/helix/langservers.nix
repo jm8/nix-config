@@ -28,7 +28,7 @@
       nodePackages.vscode-langservers-extracted
       nodePackages.yaml-language-server
       # ocamlPackages.ocaml-lsp
-      pyright
+      basedpyright
       ruff
       # rubyPackages.solargraph
       rust-analyzer

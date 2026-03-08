@@ -40,8 +40,8 @@ with lib.hm.gvariant; {
       move-to-workspace-right = ["<Shift><Alt>d"];
       switch-applications = [];
       switch-applications-backward = [];
-      switch-input-source = [];
-      switch-input-source-backward = [];
+      switch-input-source = ["<Super>space"];
+      switch-input-source-backward = ["<Shift><Super>space"];
       switch-panels = [];
       switch-panels-backward = [];
       switch-to-workspace-last = [];
