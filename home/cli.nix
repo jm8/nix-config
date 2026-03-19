@@ -84,6 +84,7 @@
     sqlite
     sl
     lazygit
+    woeusb-ng
   ];
 
   programs.zellij = {
