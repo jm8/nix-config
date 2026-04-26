@@ -10,7 +10,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/control-center" = {
       last-panel = "keyboard";
-      window-state = mkTuple [ 1783 1150 true ];
+      window-state = mkTuple [ 1773 1150 true ];
     };
 
     "org/gnome/desktop/a11y" = {
@@ -74,7 +74,11 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-mozilla-firefox" "org-gnome-ptyxis" "org-gnome-software" "gnome-power-panel" "gimp" "org-gnome-settings" "calibre-gui" ];
+      application-children = [ "org-mozilla-firefox" "org-gnome-ptyxis" "org-gnome-software" "gnome-power-panel" "gimp" "org-gnome-settings" "calibre-gui" "alacritty" ];
+    };
+
+    "org/gnome/desktop/notifications/application/alacritty" = {
+      application-id = "Alacritty.desktop";
     };
 
     "org/gnome/desktop/notifications/application/calibre-gui" = {
@@ -179,8 +183,8 @@ with lib.hm.gvariant; {
 
     "org/gnome/mutter/keybindings" = {
       cancel-input-capture = [];
-      toggle-tiled-left = [ "<Alt>z" ];
-      toggle-tiled-right = [ "<Alt>c" ];
+      toggle-tiled-left = [];
+      toggle-tiled-right = [];
     };
 
     "org/gnome/mutter/wayland/keybindings" = {
@@ -237,20 +241,23 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/shell/extensions/paperwm" = {
-      horizontal-margin = 0;
+      gesture-horizontal-fingers = 3;
+      horizontal-margin = 10;
       last-used-display-server = "Wayland";
+      open-window-position = 0;
       restore-attach-modal-dialogs = "true";
       restore-edge-tiling = "false";
       restore-keybinds = ''
-        {"cancel-input-capture":{"bind":"[\\"<Super><Shift>Escape\\"]","schema_id":"org.gnome.mutter.keybindings"},"restore-shortcuts":{"bind":"[\\"<Super>Escape\\"]","schema_id":"org.gnome.mutter.wayland.keybindings"},"switch-to-workspace-left":{"bind":"[\\"<Alt>a\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-to-workspace-right":{"bind":"[\\"<Alt>d\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-group-backward":{"bind":"[\\"<Shift><Super>Above_Tab\\",\\"<Shift><Alt>Above_Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-to-workspace-1":{"bind":"[\\"<Super>Home\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"maximize":{"bind":"[\\"<Alt>w\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-group":{"bind":"[\\"<Super>Above_Tab\\",\\"<Alt>Above_Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-up":{"bind":"[\\"<Control><Shift><Alt>Up\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-down":{"bind":"[\\"<Control><Shift><Alt>Down\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-windows":{"bind":"[\\"<Alt>Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-windows-backward":{"bind":"[\\"<Shift><Alt>Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"shift-overview-up":{"bind":"[\\"<Super><Alt>Up\\"]","schema_id":"org.gnome.shell.keybindings"},"shift-overview-down":{"bind":"[\\"<Super><Alt>Down\\"]","schema_id":"org.gnome.shell.keybindings"},"focus-active-notification":{"bind":"[\\"<Super>n\\"]","schema_id":"org.gnome.shell.keybindings"},"toggle-message-tray":{"bind":"[\\"<Super>v\\",\\"<Super>m\\"]","schema_id":"org.gnome.shell.keybindings"},"rotate-video-lock-static":{"bind":"[\\"<Super>o\\",\\"XF86RotationLockToggle\\"]","schema_id":"org.gnome.settings-daemon.plugins.media-keys"},"move-to-workspace-left":{"bind":"[\\"<Shift><Alt>a\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-right":{"bind":"[\\"<Shift><Alt>d\\"]","schema_id":"org.gnome.desktop.wm.keybindings"}}
+        {"cancel-input-capture":{"bind":"[\\"<Super><Shift>Escape\\"]","schema_id":"org.gnome.mutter.keybindings"},"toggle-tiled-left":{"bind":"[\\"<Alt>z\\"]","schema_id":"org.gnome.mutter.keybindings"},"toggle-tiled-right":{"bind":"[\\"<Alt>c\\"]","schema_id":"org.gnome.mutter.keybindings"},"restore-shortcuts":{"bind":"[\\"<Super>Escape\\"]","schema_id":"org.gnome.mutter.wayland.keybindings"},"switch-to-workspace-left":{"bind":"[\\"<Alt>a\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-to-workspace-right":{"bind":"[\\"<Alt>d\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-group-backward":{"bind":"[\\"<Shift><Super>Above_Tab\\",\\"<Shift><Alt>Above_Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-to-workspace-1":{"bind":"[\\"<Super>Home\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"maximize":{"bind":"[\\"<Alt>w\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-group":{"bind":"[\\"<Super>Above_Tab\\",\\"<Alt>Above_Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-left":{"bind":"[\\"<Shift><Alt>a\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-up":{"bind":"[\\"<Control><Shift><Alt>Up\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-down":{"bind":"[\\"<Control><Shift><Alt>Down\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"move-to-workspace-right":{"bind":"[\\"<Shift><Alt>d\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-windows":{"bind":"[\\"<Alt>Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"switch-windows-backward":{"bind":"[\\"<Shift><Alt>Tab\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"shift-overview-up":{"bind":"[\\"<Super><Alt>Up\\"]","schema_id":"org.gnome.shell.keybindings"},"shift-overview-down":{"bind":"[\\"<Super><Alt>Down\\"]","schema_id":"org.gnome.shell.keybindings"},"focus-active-notification":{"bind":"[\\"<Super>n\\"]","schema_id":"org.gnome.shell.keybindings"},"toggle-message-tray":{"bind":"[\\"<Super>v\\",\\"<Super>m\\"]","schema_id":"org.gnome.shell.keybindings"},"rotate-video-lock-static":{"bind":"[\\"<Super>o\\",\\"XF86RotationLockToggle\\"]","schema_id":"org.gnome.settings-daemon.plugins.media-keys"}}
       '';
       restore-workspaces-only-on-primary = "true";
-      selection-border-radius-bottom = 5;
-      selection-border-radius-top = 5;
+      selection-border-radius-bottom = 15;
+      selection-border-radius-top = 15;
       selection-border-size = 5;
-      vertical-margin = 0;
-      vertical-margin-bottom = 0;
-      window-gap = 5;
+      use-default-background = false;
+      vertical-margin = 10;
+      vertical-margin-bottom = 10;
+      window-gap = 15;
       winprops = [ ''
         {"wm_class":"","title":"PaperWM"}
       '' ];
@@ -260,15 +267,19 @@ with lib.hm.gvariant; {
       cycle-width = [ "<Alt>r" ];
       drift-left = [ "<Alt>bracketleft" ];
       drift-right = [ "<Alt>bracketright" ];
+      move-down-workspace = [ "<Shift><Alt>c" "<Shift><Alt>z" ];
       move-left = [ "<Shift><Alt>a" ];
       move-right = [ "<Control><Super>period" "<Shift><Super>period" "<Control><Super>Right" "<Shift><Alt>d" ];
+      move-up-workspace = [ "<Shift><Alt>z" ];
+      switch-down-workspace = [ "<Alt>c" ];
       switch-left = [ "<Alt>a" ];
       switch-right = [ "<Alt>d" ];
+      switch-up-workspace = [ "<Alt>z" ];
       toggle-maximize-width = [ "<Alt>w" ];
     };
 
     "org/gnome/shell/extensions/paperwm/workspaces" = {
-      list = [ "455cc56e-281c-4b94-8ba2-ae5ebd96f539" "26cba678-542a-43b7-885c-7c79d24af4d7" "c62b8f4b-d487-403b-a94a-eb70b24772b5" ];
+      list = [ "455cc56e-281c-4b94-8ba2-ae5ebd96f539" "26cba678-542a-43b7-885c-7c79d24af4d7" "c62b8f4b-d487-403b-a94a-eb70b24772b5" "9d128eb6-6a03-48a2-9bf0-fb983a9749bd" "b4eed425-5ead-4001-b1d0-5ff553bd2815" ];
     };
 
     "org/gnome/shell/extensions/paperwm/workspaces/26cba678-542a-43b7-885c-7c79d24af4d7" = {
@@ -276,7 +287,17 @@ with lib.hm.gvariant; {
     };
 
     "org/gnome/shell/extensions/paperwm/workspaces/455cc56e-281c-4b94-8ba2-ae5ebd96f539" = {
+      background = "";
+      color = "rgb(49,78,108)";
       index = 0;
+    };
+
+    "org/gnome/shell/extensions/paperwm/workspaces/9d128eb6-6a03-48a2-9bf0-fb983a9749bd" = {
+      index = 3;
+    };
+
+    "org/gnome/shell/extensions/paperwm/workspaces/b4eed425-5ead-4001-b1d0-5ff553bd2815" = {
+      index = 4;
     };
 
     "org/gnome/shell/extensions/paperwm/workspaces/c62b8f4b-d487-403b-a94a-eb70b24772b5" = {
@@ -314,6 +335,11 @@ with lib.hm.gvariant; {
 
     "org/gnome/system/location" = {
       enabled = false;
+    };
+
+    "org/gtk/gtk4/settings/color-chooser" = {
+      custom-colors = [ (mkTuple [ 0.33725491166114807 0.32156863808631897 0.2823529541492462 1.0 ]) (mkTuple [ 0.1921568661928177 0.30588236451148987 0.42352941632270813 1.0 ]) ];
+      selected-color = mkTuple [ true 0.1921568661928177 0.30588236451148987 0.42352941632270813 1.0 ];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
