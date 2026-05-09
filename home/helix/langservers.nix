@@ -20,13 +20,13 @@
       # metals
       # nim
       # nimlsp
-      nodePackages.bash-language-server
-      nodePackages.dockerfile-language-server-nodejs
-      nodePackages.svelte-language-server
-      nodePackages.typescript-language-server
-      # nodePackages.vls
-      nodePackages.vscode-langservers-extracted
-      nodePackages.yaml-language-server
+      bash-language-server
+      dockerfile-language-server-nodejs
+      svelte-language-server
+      typescript-language-server
+      # vls
+      vscode-langservers-extracted
+      yaml-language-server
       # ocamlPackages.ocaml-lsp
       basedpyright
       ruff

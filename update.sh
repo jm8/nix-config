@@ -11,6 +11,7 @@ if home-manager switch --flake ~/nix-config; then
   git pull --ff-only || exit 1
   git push
 else
+  notify-send "FAILED TO UPDATE!!!!!!"
   git stash
   home-manager switch --flake ~/nix-config 
 fi

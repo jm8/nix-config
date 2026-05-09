@@ -46,11 +46,10 @@
     metasploit
     nasm
     ncdu
-    neofetch
     netcat-openbsd
     nixGL
     nmap
-    nodePackages.pnpm
+    pnpm
     nodejs
     octave
     onlyoffice-desktopeditors
