@@ -84,6 +84,8 @@
     sl
     lazygit
     woeusb-ng
+    gnome-randr
+    go-2fa
   ];
 
   programs.zellij = {
