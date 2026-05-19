@@ -2,29 +2,8 @@
 {lib, ...}:
 with lib.hm.gvariant; {
   dconf.settings = {
-    "org/gnome/Ptyxis" = {
-      default-profile-uuid = "05217fa5b2451c9bfb8c71be69d0851a";
-      profile-uuids = [ "05217fa5b2451c9bfb8c71be69d0851a" ];
-      window-size = mkTuple [ (mkUint32 255) (mkUint32 55) ];
-    };
-
-    "org/gnome/control-center" = {
-      last-panel = "keyboard";
-      window-state = mkTuple [ 1773 1150 true ];
-    };
-
     "org/gnome/desktop/a11y" = {
       always-show-universal-access-status = true;
-    };
-
-    "org/gnome/desktop/app-folders" = {
-      folder-children = [ "System" "Utilities" "YaST" "Pardus" ];
-    };
-
-    "org/gnome/desktop/app-folders/folders/Pardus" = {
-      categories = [ "X-Pardus-Apps" ];
-      name = "X-Pardus-Apps.directory";
-      translate = true;
     };
 
     "org/gnome/desktop/app-folders/folders/System" = {
@@ -36,12 +15,6 @@ with lib.hm.gvariant; {
     "org/gnome/desktop/app-folders/folders/Utilities" = {
       apps = [ "org.gnome.Connections.desktop" "org.gnome.Papers.desktop" "org.gnome.font-viewer.desktop" "org.gnome.Loupe.desktop" ];
       name = "X-GNOME-Shell-Utilities.directory";
-      translate = true;
-    };
-
-    "org/gnome/desktop/app-folders/folders/YaST" = {
-      categories = [ "X-SuSE-YaST" ];
-      name = "suse-yast.directory";
       translate = true;
     };
 
@@ -164,14 +137,10 @@ with lib.hm.gvariant; {
       num-workspaces = 10;
     };
 
-    "org/gnome/evolution-data-server" = {
-      migrated = true;
-    };
-
-    "org/gnome/login-screen" = {
-      enable-fingerprint-authentication = true;
-      enable-smartcard-authentication = false;
-    };
+    # "org/gnome/login-screen" = {
+    #   enable-fingerprint-authentication = true;
+    #   enable-smartcard-authentication = false;
+    # };
 
     "org/gnome/mutter" = {
       attach-modal-dialogs = false;
@@ -189,21 +158,6 @@ with lib.hm.gvariant; {
 
     "org/gnome/mutter/wayland/keybindings" = {
       restore-shortcuts = [];
-    };
-
-    "org/gnome/nautilus/preferences" = {
-      default-folder-viewer = "icon-view";
-      migrated-gtk-settings = true;
-      search-filter-time-type = "last_modified";
-    };
-
-    "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 890 550 ];
-    };
-
-    "org/gnome/nm-applet/eap/278b9c94-0483-48ec-8b37-76882ab2a157" = {
-      ignore-ca-cert = true;
-      ignore-phase2-ca-cert = false;
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -229,16 +183,12 @@ with lib.hm.gvariant; {
       sleep-inactive-ac-type = "nothing";
     };
 
-    "org/gnome/shell" = {
-      disabled-extensions = [ "forge@jmmaranan.com" ];
-      enabled-extensions = [ "background-logo@fedorahosted.org" "paperwm@paperwm.github.com" ];
-      last-selected-power-profile = "power-saver";
-      welcome-dialog-last-shown-version = "49.1";
-    };
-
-    "org/gnome/shell/extensions/forge" = {
-      css-last-update = mkUint32 37;
-    };
+    # "org/gnome/shell" = {
+    #   disabled-extensions = [ "forge@jmmaranan.com" ];
+    #   enabled-extensions = [ "background-logo@fedorahosted.org" "paperwm@paperwm.github.com" ];
+    #   last-selected-power-profile = "power-saver";
+    #   welcome-dialog-last-shown-version = "49.1";
+    # };
 
     "org/gnome/shell/extensions/paperwm" = {
       gesture-horizontal-fingers = 3;
@@ -278,32 +228,6 @@ with lib.hm.gvariant; {
       toggle-maximize-width = [ "<Alt>w" ];
     };
 
-    "org/gnome/shell/extensions/paperwm/workspaces" = {
-      list = [ "455cc56e-281c-4b94-8ba2-ae5ebd96f539" "26cba678-542a-43b7-885c-7c79d24af4d7" "c62b8f4b-d487-403b-a94a-eb70b24772b5" "9d128eb6-6a03-48a2-9bf0-fb983a9749bd" "b4eed425-5ead-4001-b1d0-5ff553bd2815" ];
-    };
-
-    "org/gnome/shell/extensions/paperwm/workspaces/26cba678-542a-43b7-885c-7c79d24af4d7" = {
-      index = 1;
-    };
-
-    "org/gnome/shell/extensions/paperwm/workspaces/455cc56e-281c-4b94-8ba2-ae5ebd96f539" = {
-      background = "";
-      color = "rgb(49,78,108)";
-      index = 0;
-    };
-
-    "org/gnome/shell/extensions/paperwm/workspaces/9d128eb6-6a03-48a2-9bf0-fb983a9749bd" = {
-      index = 3;
-    };
-
-    "org/gnome/shell/extensions/paperwm/workspaces/b4eed425-5ead-4001-b1d0-5ff553bd2815" = {
-      index = 4;
-    };
-
-    "org/gnome/shell/extensions/paperwm/workspaces/c62b8f4b-d487-403b-a94a-eb70b24772b5" = {
-      index = 2;
-    };
-
     "org/gnome/shell/keybindings" = {
       focus-active-notification = [];
       screenshot-window = [];
@@ -323,48 +247,6 @@ with lib.hm.gvariant; {
       toggle-application-view = [ "" ];
       toggle-message-tray = [];
       toggle-overview = [ "" ];
-    };
-
-    "org/gnome/software" = {
-      check-timestamp = mkInt64 1777134513;
-      first-run = false;
-      flatpak-purge-timestamp = mkInt64 1777135004;
-      update-notification-timestamp = mkInt64 1777035472;
-      upgrade-notification-timestamp = mkInt64 1776642054;
-    };
-
-    "org/gnome/system/location" = {
-      enabled = false;
-    };
-
-    "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.33725491166114807 0.32156863808631897 0.2823529541492462 1.0 ]) (mkTuple [ 0.1921568661928177 0.30588236451148987 0.42352941632270813 1.0 ]) ];
-      selected-color = mkTuple [ true 0.1921568661928177 0.30588236451148987 0.42352941632270813 1.0 ];
-    };
-
-    "org/gtk/gtk4/settings/file-chooser" = {
-      show-hidden = false;
-      sort-directories-first = false;
-    };
-
-    "org/gtk/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.0 1.0 0.0 1.0 ]) (mkTuple [ 1.0 1.0 0.0 1.0 ]) (mkTuple [ 1.0 0.0 0.0 1.0 ]) ];
-      selected-color = mkTuple [ true 0.0 0.0 0.0 1.0 ];
-    };
-
-    "org/gtk/settings/file-chooser" = {
-      date-format = "regular";
-      location-mode = "path-bar";
-      show-hidden = false;
-      show-size-column = true;
-      show-type-column = true;
-      sidebar-width = 163;
-      sort-column = "name";
-      sort-directories-first = false;
-      sort-order = "ascending";
-      type-format = "category";
-      window-position = mkTuple [ 26 23 ];
-      window-size = mkTuple [ 1231 902 ];
     };
 
   };
