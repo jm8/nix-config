@@ -10,17 +10,8 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+c",
-        "command": "editor.action.commentLine",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+o",
         "command": "workbench.action.navigateBack",
-    },
-    {
-        "key": "ctrl+x",
-        "command": "noop",
     },
     {
         "key": "ctrl+x",
