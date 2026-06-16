@@ -9,50 +9,50 @@
       with ps; [
         requests
         pwntools
-        pycryptodome
+        # pycryptodome
         tqdm
-        sympy
+        # sympy
       ]);
     nixGL = config.nixGL.packages.x86_64-linux.nixGLIntel;
   in [
     ranger
-    awscli2
+    # awscli2
     bat
     bear
     binutils
-    binwalk
-    beancount_2
-    beancount-language-server
-    bun
-    cachix
-    canvas-cli.packages.x86_64-linux.default
-    cmake
+    # binwalk
+    # beancount_2
+    # beancount-language-server
+    # bun
+    # cachix
+    # canvas-cli.packages.x86_64-linux.default
+    # cmake
     comma
     dconf2nix
-    deno
-    duckdb
+    # deno
+    # duckdb
     eza
     ffmpeg
     file
     flyctl
     gcc
-    musl.dev
+    # musl.dev
     gdb
     gnumake
     go
     go-task
     jq
     just
-    metasploit
-    nasm
+    # metasploit
+    # nasm
     ncdu
     netcat-openbsd
     nixGL
     nmap
     pnpm
     nodejs
-    octave
-    onlyoffice-desktopeditors
+    # octave
+    # onlyoffice-desktopeditors
     pandoc
     patchelf
     pdftk
@@ -60,7 +60,7 @@
     ripgrep
     rlwrap
     rustscan
-    ssm-session-manager-plugin
+    # ssm-session-manager-plugin
     strace
     tinymist
     tmux
@@ -75,11 +75,11 @@
     yt-dlp
     zathura
     zip
-    texlive.combined.scheme-full
+    # texlive.combined.scheme-full
     rr
     serpl
-    kubectl
-    kubelogin-oidc
+    # kubectl
+    # kubelogin-oidc
     sqlite
     sl
     lazygit

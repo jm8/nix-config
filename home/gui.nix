@@ -20,9 +20,9 @@
     # (config.lib.nixGL.wrap godot_4)
     # (config.lib.nixGL.wrap pcsx2)
     # (config.lib.nixGL.wrap prismlauncher)
-    audacity
+    # audacity
     # beekeeper-studio
-    blender
+    # blender
     (config.lib.nixGL.wrap calibre)
     chromium
     gimp3
@@ -31,17 +31,17 @@
     gnome-tweaks
     gnomeExtensions.just-perfection
     inkscape
-    lapce
+    # lapce
     obs-studio
     vlc
     mpv
-    kodi
+    # kodi
     aria2
-    reaper
-    onboard
+    # reaper
+    # onboard
     # krita
-    runelite
+    # runelite
     clonehero
-    zed-editor
+    # zed-editor
   ];
 }
