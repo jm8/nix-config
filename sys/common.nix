@@ -80,6 +80,7 @@
       "steam-runtime"
       "steam-run"
       "nvidia-persistenced"
+      "nvidia-kernel-modules"
       "zoom"
     ];
 
@@ -108,9 +109,9 @@
 
   boot.supportedFilesystems = ["ntfs"];
 
-  programs.adb.enable = true;
+  # programs.adb.enable = true;
 
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
   # services.xserver.displayManager.gdm.enable = true;
 
@@ -122,7 +123,7 @@
   programs.dconf.enable = true;
   services.dbus.enable = true;
 
-  nixpkgs.config.firefox.enableGnomeExtensions = true;
+  # nixpkgs.config.firefox.enableGnomeExtensions = true;
 
   services.openssh = {
     enable = true;

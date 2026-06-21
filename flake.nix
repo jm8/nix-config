@@ -13,16 +13,13 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    networkmanager-nixpkgs = {
-      url = "github:NixOS/nixpkgs/22.05";
-    };
     nix-analyzer = {
       url = "github:jm8/nix-analyzer";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    canvas-cli = {
-      url = "github:mbund/canvas-cli";
-    };
+    # canvas-cli = {
+    #   url = "github:mbund/canvas-cli";
+    # };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,7 +33,6 @@
     nixpkgs,
     home-manager,
     nix-index-database,
-    networkmanager-nixpkgs,
     nixGL,
     ...
   } @ attrs: let
@@ -51,30 +47,8 @@
           "vscode"
           "terraform"
         ];
-      overlays = [
-        (
-          final: prev: let
-            nmpkgs = networkmanager-nixpkgs.legacyPackages.x86_64-linux;
-          in {
-            inherit (nmpkgs) wpa_supplicant;
-          }
-        )
-      ];
     };
   in {
-    homeConfigurations."josh@stryver" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-      extraSpecialArgs = attrs;
-      modules = [
-        ./home
-        ./home/gui.nix
-        nix-index-database.hmModules.nix-index
-        {home.username = "josh";}
-        {home.stateVersion = "24.05";}
-        {home.homeDirectory = "/var/home/josh";}
-      ];
-    };
-
     homeConfigurations."josh@darnay" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = attrs;

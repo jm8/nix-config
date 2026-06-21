@@ -9,7 +9,7 @@
 }: {
   imports = [
     ./cli.nix
-    ./gui.nix
+    # ./gui.nix
     ./helix
     ./xdg.nix
     ./dconf.nix

@@ -8,63 +8,66 @@
     pythonWithPackages = python3.withPackages (ps:
       with ps; [
         requests
-        pwntools
       ]);
     nixGL = config.nixGL.packages.x86_64-linux.nixGLIntel;
   in [
-    awscli2
-    bat
-    bear
-    binutils
-    bun
-    cachix
-    canvas-cli.packages.x86_64-linux.default
+    # awscli2
+    # bat
+    # bear
+    # binutils
+    # bun
+    # cachix
+    # canvas-cli.packages.x86_64-linux.default
     comma
     dconf2nix
-    deno
+    # deno
     eza
-    ffmpeg
+    # ffmpeg
     file
-    flyctl
-    go-task
-    gdb
-    patchelf
-    pwndbg
-    ghidra
-    jq
-    just
-    neofetch
-    netcat-openbsd
-    nixGL
-    nodePackages.pnpm
-    nodejs
-    octave
-    onlyoffice-bin
-    pandoc
-    pdftk
-    pwndbg
-    pythonWithPackages
-    ripgrep
-    strace
-    texlive.combined.scheme-full
-    typst
-    typst-lsp
-    unzip
-    uv
-    wget
-    wireshark
-    wl-clipboard
-    yt-dlp
-    zathura
-    zellij
-    zip
+    # flyctl
+    # go-task
+    # gdb
+    # patchelf
+    # pwndbg
+    # ghidra
+    # jq
+    # just
+    # neofetch
+    # netcat-openbsd
+    # nixGL
+    # nodePackages.pnpm
+    # nodejs
+    # octave
+    # onlyoffice-bin
+    # pandoc
+    # pdftk
+    # pwndbg
+    # pythonWithPackages
+    # ripgrep
+    # strace
+    # texlive.combined.scheme-full
+    # typst
+    # typst-lsp
+    # unzip
+    # uv
+    # wget
+    # wireshark
+    # wl-clipboard
+    # yt-dlp
+    # zathura
+    # zellij
+    # zip
 
-    cmake
-    gnumake
-    gcc
+    # cmake
+    # gnumake
+    # gcc
+    tmux
+    aria2
+    lazygit
+    ncdu
   ];
 
-  programs.zsh = {
-    enable = true;
-  };
+  # programs.zsh = {
+  #   enable = true;
+  # };
 }

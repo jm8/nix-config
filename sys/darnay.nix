@@ -51,7 +51,7 @@
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
       nvidia-vaapi-driver
     ];
@@ -60,10 +60,10 @@
 
   systemd.enableEmergencyMode = false;
 
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=10s
-    DefaultTimeoutStartSec=10s
-  '';
+  # systemd.extraConfig = ''
+  #   DefaultTimeoutStopSec=10s
+  #   DefaultTimeoutStartSec=10s
+  # '';
 
   security.sudo.extraConfig = ''
     # rollback results in sudo lectures after each reboot
@@ -71,7 +71,7 @@
   '';
 
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sdb";
+  boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

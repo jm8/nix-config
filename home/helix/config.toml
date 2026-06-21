@@ -2,6 +2,7 @@ theme = "catppuccin_macchiato"
 
 [editor]
 line-number = "relative"
+bufferline = "multiple"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -10,3 +11,6 @@ select = "underline"
 
 [editor.lsp]
 display-messages = true
+
+[editor.file-picker]
+git-ignore = false
