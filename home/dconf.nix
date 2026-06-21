@@ -133,7 +133,7 @@ with lib.hm.gvariant; {
     "org/gnome/desktop/wm/preferences" = {
       auto-raise = false;
       button-layout = "appmenu:close";
-      focus-mode = "sloppy";
+      focus-mode = "click";
       num-workspaces = 10;
     };
 

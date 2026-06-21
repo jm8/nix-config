@@ -86,6 +86,7 @@
     woeusb-ng
     gnome-randr
     go-2fa
+    borgbackup
   ];
 
   programs.zellij = {

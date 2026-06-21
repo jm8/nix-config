@@ -37,3 +37,6 @@ language-servers = [ "awk-language-server" ]
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
 formatter = { command = "/var/home/josh/src/cc.awk/node_modules/prettier/bin-prettier.js", args = ["--parser=awk-parse"]}
+
+[language-server.tinymist.config]
+exportPdf = "onSave"
