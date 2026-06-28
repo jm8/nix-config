@@ -57,6 +57,7 @@
     ];
   };
   hardware.nvidia.open = false;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
 
   systemd.enableEmergencyMode = false;
 
@@ -71,10 +72,33 @@
   '';
 
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.device = "/dev/disk/by-id/ata-CT500MX500SSD1_1828E14857C9";
   boot.loader.grub.useOSProber = true;
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # services.calibre-server = {
+  #   enable = true;
+  #   port = 8080;
+  #   libraryDir = "/home/josh/calibre";
+  #   auth.enable = true;
+  #   auth.userDb = "/home/josh/calibre/users.sqlite";
+  #   user = "josh";
+  #   group = "josh";
+  # };
+  services.webdav = {
+    enable = true;
+    settings = {
+      address = "0.0.0.0";
+      port = 8080;
+      directory = "/srv/ebooks";
+      permissions = "CRUD";
+      users = [{
+        username = "josh";
+        password = "thomasaquinas";
+      }];
+    };
+  };
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }

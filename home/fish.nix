@@ -186,6 +186,7 @@
       "gwtmv" = ''git worktree move'';
       "gwtrm" = ''git worktree remove'';
       "gstu" = ''gsta --include-untracked'';
+      "lg" = ''lazygit'';
     };
     plugins = [
       {

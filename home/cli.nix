@@ -15,7 +15,7 @@
     # bat
     # bear
     # binutils
-    # bun
+    bun
     # cachix
     # canvas-cli.packages.x86_64-linux.default
     comma
@@ -42,7 +42,7 @@
     # pandoc
     # pdftk
     # pwndbg
-    # pythonWithPackages
+    pythonWithPackages
     # ripgrep
     # strace
     # texlive.combined.scheme-full

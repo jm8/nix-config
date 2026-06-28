@@ -91,4 +91,30 @@
   nixGL.packages = nixGL.packages;
   nixGL.vulkan.enable = true;
   nixGL.defaultWrapper = "mesa";
+
+  systemd.user.services.thermostat = {
+    Unit = {
+      Description = "Thermostat";
+    };
+
+    Service = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.writeShellScript "thermostat" ''
+        echo "Running at $(date)"
+        git -C ~/src/thermostat pull
+        python3 ~/src/thermostat/run.py
+      ''}";
+    };
+  };
+
+  systemd.user.timers.thermostat = {
+    Timer = {
+      OnCalendar = "*-*-* *:0/15:00";
+      Persistent = true;
+    };
+
+    Install = {
+      WantedBy = ["timers.target"];
+    };
+  };
 }
