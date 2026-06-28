@@ -87,6 +87,10 @@
     gnome-randr
     go-2fa
     borgbackup
+    ltrace
+    perf
+    bpftrace
+    intelephense
   ];
 
   programs.zellij = {

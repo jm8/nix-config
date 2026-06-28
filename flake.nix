@@ -47,6 +47,7 @@
           "terraform"
           "reaper"
           "clonehero"
+          "intelephense"
         ];
     };
   in {
