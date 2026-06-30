@@ -23,7 +23,7 @@
     # binwalk
     # beancount_2
     # beancount-language-server
-    # bun
+    bun
     # cachix
     # canvas-cli.packages.x86_64-linux.default
     # cmake
