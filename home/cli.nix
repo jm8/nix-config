@@ -91,6 +91,7 @@
     perf
     bpftrace
     intelephense
+    k2pdfopt
   ];
 
   programs.zellij = {
