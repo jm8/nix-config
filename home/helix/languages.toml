@@ -40,3 +40,8 @@ formatter = { command = "/var/home/josh/src/cc.awk/node_modules/prettier/bin-pre
 
 [language-server.tinymist.config]
 exportPdf = "onSave"
+
+[[language]]
+name = "c"
+auto-format = true
+formatter = { command = "clang-format" }

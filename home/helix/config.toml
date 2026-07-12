@@ -12,5 +12,5 @@ select = "underline"
 [editor.lsp]
 display-messages = true
 
-[editor.file-picker]
-git-ignore = false
+# [editor.file-picker]
+# git-ignore = false

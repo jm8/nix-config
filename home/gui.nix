@@ -24,6 +24,7 @@
     # beekeeper-studio
     # blender
     (config.lib.nixGL.wrap calibre)
+    (config.lib.nixGL.wrap azahar)
     chromium
     gimp3
     gnome-boxes
