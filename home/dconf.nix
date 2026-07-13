@@ -217,7 +217,7 @@ with lib.hm.gvariant; {
       cycle-width = [ "<Alt>r" ];
       drift-left = [ "<Alt>bracketleft" ];
       drift-right = [ "<Alt>bracketright" ];
-      move-down-workspace = [ "<Shift><Alt>c" "<Shift><Alt>z" ];
+      move-down-workspace = [ "<Shift><Alt>c" ];
       move-left = [ "<Shift><Alt>a" ];
       move-right = [ "<Control><Super>period" "<Shift><Super>period" "<Control><Super>Right" "<Shift><Alt>d" ];
       move-up-workspace = [ "<Shift><Alt>z" ];
