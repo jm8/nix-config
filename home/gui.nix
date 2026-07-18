@@ -43,6 +43,7 @@
     # krita
     # runelite
     clonehero
+    mame
     # zed-editor
   ];
 }

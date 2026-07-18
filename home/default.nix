@@ -47,6 +47,8 @@
     extraConfig = {
       push.autoSetupRemote = true;
       pull.rebase = true;
+      user.signingkey = "D6D2772A9993F240";
+      commit.gpgsign = true;
     };
   };
 
