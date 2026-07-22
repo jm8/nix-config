@@ -137,6 +137,12 @@
     };
   };
 
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+    user = "josh";
+  };
+
   # networking.firewall.allowedTCPPorts = [ 1024 ];
   networking.firewall.enable = false;
 
